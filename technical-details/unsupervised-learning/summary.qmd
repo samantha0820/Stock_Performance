@@ -1,0 +1,31 @@
+# Summary
+
+## Summary of Interpretation of Results
+
+### 1. Dimensionality Reduction
+- **Principal Component Analysis (PCA)** successfully reduced the dataset's dimensionality to two principal components, retaining over **80% of the variance**.
+- The first principal component (PC1) captured **56.9% of the variance**, while the second component (PC2) captured **23.4%**.
+- PCA revealed natural groupings in the data, which were later analyzed using clustering techniques.
+
+### 2. Clustering Analysis
+- **K-Means Clustering** identified three distinct clusters in the dataset:
+  - Optimal cluster count (`k=3`) was determined using the **Elbow Method**.
+  - The clustering structure was validated with a **Silhouette Score** of **0.346**, indicating moderate separation between clusters.
+  - Each cluster exhibited unique characteristics based on financial metrics like **returns, volatility**, and technical indicators.
+- **Cluster Interpretations**:
+  - Cluster 1: High volatility, indicating risky assets.
+  - Cluster 2: Low volatility and consistent returns, aligning with stable investments.
+  - Cluster 3: Intermediate behavior with mixed risk profiles.
+
+### 3. Correlation and Macro Linkages
+- **Correlation Analysis** revealed strong linear relationships among price-related features (e.g., `Open`, `Close`, `MA_50`, `MA_200`).
+- **Granger Causality Tests** highlighted significant causality between macroeconomic indicators like **GDP**, **CPI**, and market returns.
+  - For example, **GDP growth** exhibited strong causality with **S&P 500 returns**, suggesting its importance in market performance analysis.
+
+## Conclusion
+
+The unsupervised-learning revealed critical patterns and relationships within financial datasets, providing insights into market dynamics and their macroeconomic drivers.
+
+### Key Takeaways:
+1. **PCA** effectively reduced the dataset’s complexity while preserving critical variance, making it suitable for clustering and visualization.
+2. **K-Means Clustering** identified natural groupings, distinguishing risky and stable investments.

@@ -1,0 +1,34 @@
+# Instructions 
+
+## Introduction and Motivation:
+
+This section is to predict financial outcomes and market behavior. The primary focus is on predicting:
+1. The future direction of the **Dow Jones Index** (binary classification).
+2. The **5-day future return** of the Dow Jones Index (regression).
+
+## Overview of Methods:
+
+### Data Preprocessing
+- **Normalization**: Features were standardized using `StandardScaler` to ensure consistent scaling.
+- **Feature Selection**: Selected key financial indicators (e.g., `Daily_Return_sp500`, `Volatility_sp500`, `MA_50_sp500`) and lagged features (e.g., `Lag1_Return`, `Lag2_Return`).
+- **Handling Missing Data**: Missing values were imputed using column means or removed when necessary.
+- **Train-Test Split**: Data was split into 80% training and 20% testing subsets.
+
+---
+
+### Model Selection and Training
+#### Binary Classification:
+- **Algorithm**: Logistic Regression
+- **Objective**: Predict the direction of the Dow Jones Index (`Target_dow_jones`).
+- **Evaluation Metrics**: Accuracy, Precision, Recall, F1 Score, and Confusion Matrix.
+
+#### Regression:
+- **Algorithms**: Linear Regression, Random Forest, XGBoost, and LightGBM.
+- **Objective**: Predict the 5-day future return (`Future_Return_5D_dow_jones`).
+- **Evaluation Metrics**: Mean Squared Error (MSE) and R² Score.
+
+---
+
+### Training and Testing Strategy
+- **Cross-Validation**: 5-fold cross-validation to ensure robust model evaluation.
+- **Parameter Tuning**: Hyperparameters for Random Forest, XGBoost, and LightGBM were optimized to improve performance.

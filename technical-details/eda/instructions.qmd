@@ -1,0 +1,34 @@
+# Introduction
+## Introduction and Motivation
+
+The goal of this section is to perform Exploratory Data Analysis (EDA) on a dataset of financial and economic indicators. It help us understand the distributional properties of the variables. This is an important preparation for subsequent modeling.
+
+### **Background**
+The datasets used in this analysis include:
+- **Crude Oil Prices**
+- **Dow Jones Index**
+- **Gold Prices**
+- **Government Spending**
+- **Macro Series** (GDP, CPI, unemployment, and other indicators)
+
+These datasets were preprocessed into clean CSV files for further exploration. The key objectives are:
+
+1. Analyzing the distributional characteristics of numerical variables;
+2. Examining correlations between variables;
+3. Exploring the relationship between key features and target variables.
+
+
+## Overview of Methods
+
+### Data Preprocessing
+  1. Handled missing values using forward-fill and backward-fill methods.
+  2. Removed outliers exceeding a 3-standard deviation threshold.
+  3. Standardized numerical features using `StandardScaler` to ensure uniform scaling.
+
+### Visualization Techniques
+1. **Univariate Analysis**:  
+   - Using histograms and density plots to analyze the distribution of individual variables (e.g., Open, Close, Volume, RSI, MACD).
+2. **Bivariate Analysis**:
+   - Using box plots and density plots to compare the distribution of variables among target categories
+3. **Correlation Analysis**:
+   - Identifying relationships between numerical features using correlation matrices and heat maps.

@@ -1,0 +1,129 @@
+# Instructions
+
+## Introduction and Motivation
+
+The data collecting part focuses on collecting comprehensive financial and economic data to analyze market performance and economic indicators. Our goal is to collect data from three main sources: - Federal Reserve Economic Data (FRED) for macroeconomic indicators - Bureau of Economic Analysis (BEA) for national accounts data - Yahoo Finance for market performance data
+
+These sources will help us understand the relationship between economic factors and market behavior.
+
+## Overview of Methods
+
+We use three primary methods for data collection:
+
+1.  FRED API Collection:
+    -   Fetches macroeconomic indicators (GDP, CPI, Unemployment, etc.)
+    -   Retrieves Treasury yield data
+    -   Collects monetary policy indicators
+2.  BEA API Integration:
+    -   Gathers National Income and Product Accounts (NIPA) data
+    -   Collects personal income and consumption metrics
+    -   Obtains government spending information
+3.  Yahoo Finance Data Retrieval:
+    -   Downloads market index data (S&P 500, Nasdaq, Dow Jones)
+    -   Collects commodity prices (Gold, Crude Oil)
+    -   Processes daily market metrics
+
+## Data Requirements
+
+### Data Formats
+
+Primary focus on tabular data (CSV): - Time series financial data - Economic indicators - Market performance metrics
+
+### Target Variables
+
+1.  Regression Targets:
+    -   Asset price returns
+    -   Economic growth rates
+    -   Inflation metrics
+2.  Binary Classification Targets:
+    -   Market direction (up/down)
+    -   Economic state (expansion/contraction)
+    -   Yield curve status (normal/inverted)
+3.  Multiclass Classification Targets:
+    -   Market conditions (bull/bear/sideways)
+    -   Economic phases (growth/stagnation/recession)
+    -   Trading volume levels (high/medium/low)
+
+## Implementation Requirements
+
+### Data Sources
+
+1.  FRED API:
+    -   API Key required
+    -   Multiple series collection
+    -   JSON response processing
+2.  BEA API:
+    -   User authentication
+    -   Table-specific requests
+    -   Annual data retrieval
+3.  Yahoo Finance:
+    -   No authentication required
+    -   Daily data download
+    -   Multiple asset handling
+
+### Data Storage
+
+-   Save raw data to `data/raw-data/`:
+
+    ```         
+    data/raw-data/
+    ├── macro_series_raw_collection.csv
+    ├── t20100_raw_data.csv
+    ├── t10105_raw_data.csv
+    └── [asset]_raw_a.csv
+    ```
+
+-   Maintain data integrity
+
+-   Preserve original format
+
+## Documentation Requirements
+
+1.  Code Documentation:
+    -   Include all API request code
+    -   Document parameter choices
+    -   Explain data processing steps
+2.  Data Source Information:
+    -   FRED API: <https://fred.stlouisfed.org/docs/api/fred/>
+    -   BEA API: <https://apps.bea.gov/api/>
+    -   Yahoo Finance API documentation
+3.  Data Collection Methods:
+    -   API interaction processes
+    -   Data download procedures
+    -   Error handling approaches
+4.  Data Structure Documentation:
+    -   Column descriptions
+    -   Data types
+    -   Time periods
+    -   Update frequencies
+
+## Workflow Description
+
+1.  Setup:
+    -   Configure API keys
+    -   Create storage directories
+    -   Import required libraries
+2.  Data Collection:
+    -   Fetch macroeconomic data
+    -   Download market data
+    -   Retrieve national accounts data
+3.  Data Verification:
+    -   Check data completeness
+    -   Verify date ranges
+    -   Validate data types
+4.  Documentation:
+    -   Record collection process
+    -   Document data structure
+    -   Note any issues or limitations
+
+## Quality Assurance
+
+Ensure:
+
+\- All API calls are properly authenticated
+
+\- Data is saved in its original form
+
+\- Collection process is reproducible
+
+\- Documentation is complete and clear

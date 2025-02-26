@@ -1,0 +1,145 @@
+# Instructions
+
+## Introduction and Motivation
+
+This document outlines the data cleaning process for a financial market analysis project. The goal is to convert raw financial and economic data into a clean, structured format suitable for analysis. The process includes processing market data, macroeconomic indicators, personal income statistics and government spending information.
+
+## Overview of Methods
+
+The cleaning process involves several key steps and methods:
+
+1.  **Data Organization**
+    -   Raw data is stored in `data/raw-data`
+    -   Processed data is saved to `data/processed-data`
+    -   Each dataset type has specific cleaning requirements
+2.  **Key Processing Steps**
+    -   Missing value imputation
+    -   Date standardization
+    -   Technical indicator calculation
+    -   Feature engineering
+    -   Data validation and quality checks
+
+## Data Types and Processing Requirements
+
+### 1. Macroeconomic Data
+
+-   **Required Variables**: GDP, CPI, Unemployment, FedFundsRate, M2, Umscent
+-   **Processing Steps**:
+    -   Fill missing values using annual means
+    -   Calculate YoY and MoM growth rates
+    -   Generate lag variables for key indicators
+    -   Filter data from year 2000 onwards
+
+### 2. Market Data Technical Indicators
+
+-   **Required Calculations**:
+    -   Moving averages (50-day, 200-day)
+    -   RSI (14-day period)
+    -   MACD (12-day, 26-day EMAs)
+    -   Volatility metrics
+    -   Volume indicators
+    -   Price momentum indicators
+
+### 3. Personal Income and Saving Data
+
+-   **Key Metrics**:
+    -   Personal income
+    -   Disposable income
+    -   Saving rate
+    -   Consumption expenditures
+    -   Personal taxes
+
+### 4. Government Spending Data
+
+-   **Components**:
+    -   Federal spending
+    -   State and local spending
+    -   Total government expenditures
+
+## Implementation Requirements
+
+### Data Quality Standards
+
+1.  **Missing Values**
+    -   Use forward fill for price data
+    -   Apply annual means for economic indicators
+    -   Zero-fill for volume data
+    -   Default values for technical indicators (e.g., RSI = 50)
+2.  **Date Range**
+    -   Start date: 2000-11-01
+    -   End date: 2024-11-30
+    -   Daily frequency for market data
+    -   Monthly/quarterly frequency for economic data
+3.  **Technical Requirements**
+    -   Use pandas for data manipulation
+    -   Implement proper error handling
+    -   Include data validation checks
+    -   Document all cleaning steps
+
+### Code Organization
+
+1.  **Setup**
+    -   Define output folders
+    -   Import required libraries
+    -   Set up error logging
+2.  **Functions**
+    -   Implement cleaning functions for each data type
+    -   Create technical indicator calculations
+    -   Build data validation checks
+3.  **Output**
+    -   Save cleaned data in CSV format
+    -   Generate processing logs
+    -   Include data quality reports
+
+## Validation and Quality Checks
+
+### Required Checks
+
+1.  **Data Completeness**
+    -   Verify all required columns exist
+    -   Check date continuity
+    -   Validate data ranges
+2.  **Data Consistency**
+    -   Check for outliers
+    -   Verify calculations
+    -   Ensure proper data types
+3.  **Technical Indicator Validation**
+    -   Confirm indicator calculations
+    -   Verify lag variables
+    -   Validate moving averages
+
+## Output Specifications
+
+### File Structure
+
+```         
+data/
+├── raw-data/
+│   ├── macro_series_raw_collection.csv
+│   ├── t20100_raw_data.csv
+│   ├── t10105_raw_data.csv
+│   └── [asset]_raw_a.csv
+└── processed-data/
+    ├── macro_series_cleaned.csv
+    ├── personal_info_cleaned.csv
+    ├── Government_Spending_Breakdown.csv
+    └── [asset]_cleaned.csv
+```
+
+### Cleaned Data Requirements
+
+-   All dates in datetime format
+-   No missing values
+-   Proper column naming
+-   Consistent data types
+-   Technical indicators calculated
+-   Target variables generated
+
+## Iterative Process Notes
+
+The cleaning process may need to be revisited as:
+
+1.  New data becomes available
+2.  Analysis requirements change
+3.  Data quality issues are discovered
+4.  New features are needed

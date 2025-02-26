@@ -1,0 +1,50 @@
+# Introduction
+## Introduction and Motivation  
+
+This section explores the application of unsupervised learning techniques on financial and macroeconomic datasets. The objective is to reveal hidden patterns and relationships using methods such as PCA and K-Means clustering.  
+
+### Objectives:  
+1. Use **PCA** to reduce the dimensionality of high-dimensional datasets while preserving key information.  
+2. Apply **K-Means clustering** to identify distinct patterns or groupings within the data.  
+3. Investigate the relationship between financial market behaviors and macroeconomic indicators.  
+4. Detect abnormal behaviors, such as extreme volatility, and analyze their technical and macroeconomic causes.  
+
+## Overview of Methods:
+
+### **Data Preprocessing**
+- Combined and cleaned datasets (S&P 500, Crude Oil, Gold, Nasdaq, and Dow Jones).  
+- Handled missing values using forward-fill and backward-fill techniques.  
+- Removed outliers based on a 3-standard deviation threshold.  
+- Standardized data using **StandardScaler**.  
+
+### **Dimensionality Reduction**
+- **Principal Component Analysis (PCA)** was used to reduce dimensionality to 2 components.  
+- Explained variance: PC1 (**56.9%**), PC2 (**23.4%**).  
+
+**Key Outputs**:
+- Visualized PCA scatter plot to explore cluster tendencies.  
+
+#### **PCA Principle**
+PCA is a dimensionality reduction technique used to transform high-dimensional data into a low-dimensional space while retaining as much information as possible about the variance of the data. It works as follows:
+
+1. Normalize the data to ensure that each feature has a mean of zero and a standard deviation of one.
+Calculate the covariance matrix to capture the relationship between features.
+2. Perform a feature decomposition of the covariance matrix to find the principal components (i.e., the directions with the highest variance).
+3. Project the data onto these principal components to achieve dimensionality reduction.
+
+The end result is a set of uncorrelated principal components that are ordered by the magnitude of the captured variance, thus simplifying the structure of the dataset while preserving its main patterns and information. 
+
+### **Clustering Techniques**
+- Applied **K-Means Clustering**:
+  - Optimal clusters determined using **Elbow Method** (**k=3**).  
+  - Evaluated clusters using the **Silhouette Score** (**0.346**).  
+  - Analyzed feature distributions by cluster.  
+- Investigated macroeconomic indicators' relationships with market behavior using **correlation analysis** and **Granger causality tests**.  
+
+#### **K-Means Clustering Principle**
+K-Means is an iterative clustering algorithm designed to partition a dataset into `k` distinct groups. The process involves:  
+1. **Initialization**: Randomly assigning `k` cluster centroids.  
+2. **Assignment Step**: Assigning each data point to the closest centroid based on a distance metric (e.g., Euclidean distance).  
+3. **Update Step**: Recomputing centroids as the mean position of all points in a cluster.  
+4. Repeating the assignment and update steps until centroids stabilize (convergence).  
+The algorithm minimizes within-cluster variance while maximizing between-cluster variance. Key hyperparameters include the number of clusters (`k`) and the initialization method (e.g., `k-means++` for better starting centroids).  

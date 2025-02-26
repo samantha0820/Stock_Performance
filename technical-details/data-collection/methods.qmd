@@ -1,0 +1,103 @@
+# Methods
+
+## 1. Data Collection Strategies
+
+### a) FRED (Federal Reserve Economic Data) API
+
+-   **Purpose**: Retrieve comprehensive macroeconomic indicators
+-   **Series Collected**:
+    -   Gross Domestic Product (GDP)
+    -   Consumer Price Index (CPI)
+    -   Unemployment Rate
+    -   Federal Funds Rate
+    -   Money Supply (M2)
+    -   Consumer Sentiment Index
+    -   Real Estate Price Index
+    -   Exports and Imports Data
+-   **Technique**:
+    -   Utilized `requests` library for API communication
+    -   Converted raw JSON responses into pandas DataFrames
+    -   Standardized date formats and numeric conversions
+    -   Merged multiple economic series into a single comprehensive dataset
+
+### b) BEA (Bureau of Economic Analysis) API
+
+-   **Purpose**: Fetch National Income and Product Accounts (NIPA) data
+-   **Tables Retrieved**:
+    -   T20100: Gross Domestic Product and Personal Consumption
+    -   T10105: National Account Savings and Investment Data
+-   **Approach**:
+    -   Created a generic `fetch_bea_data()` function
+    -   Configured API parameters for annual frequency data
+    -   Handled potential API response variations
+    -   Converted successful responses to CSV for further analysis
+
+### c) Yahoo Finance API (yfinance)
+
+-   **Purpose**: Download market performance data for major indices and commodities
+-   **Assets Retrieved**:
+    -   S&P 500 Index
+    -   Nasdaq Composite
+    -   Dow Jones Industrial Average
+    -   Gold Futures
+    -   Crude Oil Futures
+-   **Method**:
+    -   Implemented a flexible `fetch_data()` function
+    -   Set consistent date ranges for historical data
+    -   Downloaded daily price and volume information
+    -   Standardized data columns and saved as CSV files
+
+## 2. Data Processing Techniques
+
+### File and Directory Management
+
+-   Used `os` module for robust file path handling
+-   Dynamically created output directories
+-   Implemented consistent file naming conventions
+-   Ensured data is saved in a structured, accessible format
+
+### API Request Handling
+
+-   Implemented error handling and logging
+-   Converted API responses to consistent pandas DataFrame structures
+-   Performed data type conversions (datetime, numeric)
+-   Managed potential missing or invalid data points
+
+### Data Transformation
+
+-   Reset DataFrame indexes
+-   Renamed columns for clarity
+-   Performed basic data cleaning
+-   Prepared data for subsequent analysis stages
+
+## 3. Modular Design Principles
+
+-   Created reusable functions for data fetching
+-   Separated concerns between data collection, processing, and storage
+-   Used configuration dictionaries for flexible asset and series selection
+-   Implemented error-tolerant code with try-except blocks
+
+## 4. Security and Configuration
+
+-   Utilized environment-specific API keys
+-   Configured date ranges and data retrieval parameters
+-   Implemented interval and frequency specifications for precise data collection
+
+## 5. Output and Persistence
+
+-   Saved raw collected data as CSV files
+-   Maintained a consistent output folder structure
+-   Enabled easy data inspection and further processing
+
+## Technological Stack
+
+-   **Programming Language**: Python 3.12
+-   **Key Libraries**:
+    -   `requests` for API communication
+    -   `pandas` for data manipulation
+    -   `yfinance` for financial data retrieval
+    -   `os` for file system operations
+-   **Data Sources**:
+    -   FRED API
+    -   BEA API
+    -   Yahoo Finance

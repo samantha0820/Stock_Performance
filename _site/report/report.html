@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>report – DSAN-5000: Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/gu-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">DSAN-5000: Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../report/report.html" aria-current="page"> 
+<span class="menu-text">Report</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-technical-details" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Technical details</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-technical-details">    
+        <li>
+    <a class="dropdown-item" href="../technical-details/data-collection/main.html">
+ <span class="dropdown-text">Data-collection</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../technical-details/data-cleaning/main.html">
+ <span class="dropdown-text">Data-cleaning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../technical-details/eda/main.html">
+ <span class="dropdown-text">Exploratory Data Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../technical-details/unsupervised-learning/main.html">
+ <span class="dropdown-text">Unsupervised Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../technical-details/supervised-learning/main.html">
+ <span class="dropdown-text">Supervised Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../technical-details/progress-log.html">
+ <span class="dropdown-text">Progress Log</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../technical-details/llm-usage-log.html">
+ <span class="dropdown-text">LLM usage Log</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#final-report" id="toc-final-report" class="nav-link active" data-scroll-target="#final-report">Final Report</a></li>
+  <li><a href="#market-pattern-analysis-and-portfolio-optimization-through-machine-learning-methods" id="toc-market-pattern-analysis-and-portfolio-optimization-through-machine-learning-methods" class="nav-link" data-scroll-target="#market-pattern-analysis-and-portfolio-optimization-through-machine-learning-methods"><strong>Market pattern analysis and portfolio optimization through machine learning methods</strong></a></li>
+  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
+  <ul class="collapse">
+  <li><a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda">EDA</a></li>
+  <li><a href="#supervised-learning" id="toc-supervised-learning" class="nav-link" data-scroll-target="#supervised-learning">Supervised-learning</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  <li><a href="#data-source-1" id="toc-data-source-1" class="nav-link" data-scroll-target="#data-source-1">Data Source</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="final-report" class="level1">
+<h1>Final Report</h1>
+</section>
+<section id="market-pattern-analysis-and-portfolio-optimization-through-machine-learning-methods" class="level1">
+<h1><strong>Market pattern analysis and portfolio optimization through machine learning methods</strong></h1>
+<p>In today’s complex financial markets, understanding the interactions between different market assets, macroeconomic indicators and technical factors is important for effective investment decisions. To address this problem, our project leverages data science techniques to analyze market behavior patterns, identify relationships between different asset classes, and develop portfolio optimization strategies.</p>
+<p>As global markets become increasingly more volatile and interconnected, investors have greater challenges and opportunities. Traditional market analysis methods often struggle to capture the complex dynamics between various market assets and their responses to economic changes. In addition, market conditions change rapidly, requiring more sophisticated methods to detect abnormal market behavior and predict potential market trends.</p>
+<p>This project addresses these issues through a comprehensive analytical framework that combines machine learning, statistical modeling and technical analysis. Through the analysis of many aspects of financial markets, we aim to provide theoretical insights into market behavior and provide practical tools for market analysis and portfolio management. In addition, we also hope that the results of this research can be useful for investors, analysts and financial institutions to effectively analyze the market environment and optimize investment strategies.</p>
+</section>
+<section id="objective" class="level1">
+<h1>Objective</h1>
+<p>This research aims to enhance market analysis and investment decision-making through the following objectives:</p>
+<p>1. <strong>Market Pattern Analysis and Prediction</strong></p>
+<ul>
+<li><p>Examine the predictability of short-term market returns</p></li>
+<li><p>Evaluate the effectiveness of various technical indicators</p></li>
+<li><p>Develop machine learning models to capture market patterns</p></li>
+</ul>
+<p>2. <strong>Macroeconomic Impact Assessment</strong></p>
+<ul>
+<li><p>Investigate the complex relationship between macroeconomic indicators and market performance</p></li>
+<li><p>Analyze how different asset classes respond to economic changes</p></li>
+<li><p>Identify key economic drivers for market movements</p></li>
+</ul>
+<p>3. <strong>Technical Analysis Framework Development</strong></p>
+<ul>
+<li><p>Combine technical indicators with future earnings analysis</p></li>
+<li><p>Study correlations between technical indicators and market performance</p></li>
+<li><p>Develop reliable market analysis and forecasting frameworks</p></li>
+</ul>
+<p>4. <strong>Investment Decision Support</strong></p>
+<ul>
+<li><p>Create practical tools for market analysis</p></li>
+<li><p>Develop portfolio management strategies</p></li>
+<li><p>Provide actionable insights for investment decisions</p></li>
+</ul>
+</section>
+<section id="data-source" class="level1">
+<h1>Data Source</h1>
+<p>Our data collection approach uses three main methods to ensure we assemble a comprehensive data set that captures macroeconomic fundamentals and market performance indicators. Through the FRED API, we obtain comprehensive macroeconomic data, including key indicators such as GDP, CPI, unemployment rate, and government bond yields. Next, integration with the BEA API allows us to collect detailed national income as well as personal income, consumption indicators and government spending information. Additionally, we used Yahoo Finance to retrieve market data, which includes major market indexes such as the S&amp;P 500, Nasdaq, and Dow Jones, as well as commodity prices such as gold and crude oil and their daily market indicators.</p>
+</section>
+<section id="key-findings" class="level1">
+<h1>Key Findings</h1>
+<ol type="1">
+<li><strong>Market Classification and Characteristics</strong></li>
+</ol>
+<ul>
+<li><p>Stock market indices (Nasdaq, Dow Jones, S&amp;P 500) demonstrate strong correlations (0.88-0.97), suggesting similar movement patterns</p></li>
+<li><p>Gold exhibits unique safe-haven characteristics, showing low correlation with other assets</p></li>
+<li><p>Technical indicators vary significantly across different clusters, helping us identify market conditions</p></li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Macroeconomic Influences</strong></li>
+</ol>
+<ul>
+<li><p>GDP significantly impacts stock markets across all time lags (p-values &lt; 0.05), showing the economy’s strong influence on market performance</p></li>
+<li><p>Consumer Price Index (CPI) has the most pronounced effect on markets (p-values &lt; 0.0001), particularly on S&amp;P 500 and Dow Jones</p></li>
+<li><p>While unemployment rates strongly affect stock markets, they have less impact on commodities like oil and gold</p></li>
+<li><p>The Federal Funds Rate shows consistent and significant influence on the Dow Jones Industrial Average</p></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Volatility and Market Anomalies</strong></li>
+</ol>
+<ul>
+<li><p>Stock markets tend to move together during extreme market events, sharing similar volatility patterns</p></li>
+<li><p>The oil market experiences the most extreme price swings, particularly during specific historical events</p></li>
+<li><p>Gold shows relatively stable behavior, confirming its role as a safe-haven asset</p></li>
+<li><p>Technical indicators prove effective in identifying unusual market behavior</p></li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Portfolio Optimization Insights</strong></li>
+</ol>
+<ul>
+<li><p>Risk-return analysis suggests a substantial oil allocation (approximately 55%) in the portfolio</p></li>
+<li><p>Nasdaq represents about 35% of the optimal portfolio, capturing growth opportunities</p></li>
+<li><p>A modest gold allocation (around 10%) serves as a portfolio hedge</p></li>
+<li><p>Minimal S&amp;P 500 allocation due to its high correlation with other stock indices</p></li>
+</ul>
+<ol start="5" type="1">
+<li><strong>Stock Market Short-term Return Predictability</strong></li>
+</ol>
+<ul>
+<li><p>XGBoost and LightGBM models are able to capture the general trend of the Dow Jones index’s 5-day future returns to a certain extent</p></li>
+<li><p>The models’ predicted values maintain relatively good consistency with the actual observed values, especially in the middle range of the returns</p></li>
+<li><p>This suggests that short-term stock market returns can be predicted using machine learning models, but the accuracy is not perfect, particularly at the extreme values of the returns</p></li>
+</ul>
+</section>
+<section id="methodology" class="level1">
+<h1>Methodology</h1>
+<section id="eda" class="level2">
+<h2 class="anchored" data-anchor-id="eda">EDA</h2>
+<p>We loaded several datasets related to economic indicators, including crude oil prices, gold prices, the Dow Jones, the NASDAQ, government spending, and macroeconomic variables. The data were then examined and cleaned, missing values were addressed, and outliers were removed, and the distributional properties of each variable were analyzed using histograms and density plots.</p>
+<p><img src="photos/figure1.png" class="img-fluid"></p>
+<p>From the distribution of oil, we find that some of the characteristics, such as Volume and Volatility, have significant long-tailed distributions that need to be further analyzed or processed. They may have important implications for market behavior.</p>
+<p><img src="photos/figure2.png" class="img-fluid"></p>
+<p>This heat map shows the relationship between the variables in the Dow Jones data. Price-like characteristics (e.g., opening and closing prices) are highly correlated, reflecting synchronized changes in market prices, while volume and volatility are weakly correlated with price. In addition, the target variable exhibits some positive correlation with future returns but a weaker relationship with other variables, suggesting that market performance is influenced by a combination of factors.</p>
+<p><img src="photos/figure3.png" class="img-fluid"></p>
+<p>The plot of correlation heatmap for Macro_Series shows the relationship between macroeconomic indicators. There is a highly positive correlation between GDP, CPI, import and export data, and money supply (M2), suggesting that they usually move in tandem; while the unemployment rate shows a negative correlation with these economic indicators, reflecting an inverse relationship between economic growth and employment levels.</p>
+<p>For better in-depth analysis, we merge macro data and asset data. We made a multi-market linkage analysis. <img src="photos/figure4.png" class="img-fluid"> <img src="photos/figure5.png" class="img-fluid"> <img src="photos/figure6.png" class="img-fluid"></p>
+<p>From the market correlation matrix, we know that there is a high degree of synchronization between the NASDAQ, Dow Jones and S&amp;P 500, while gold and crude oil prices are weakly linked to the other markets. After performing the PCA analysis, the market return data was successfully downscaled to capture the key market volatility characteristics. K-Means clustering identified three distinct groups in the market data.</p>
+<p><img src="photos/figure7.png" class="img-fluid"></p>
+<p>Macroeconomic indicators have a different impact on market assets. Gold is more affected by macro turbulence (e.g.&nbsp;changes in unemployment and interest rates). Stock markets have a positive relationship with economic growth and inflation, but the impact is more complex. Gold may offer protection in times of economic instability or rising interest rates. Unemployment and interest rates are important indicators of market volatility to focus on.</p>
+<p><img src="photos/figure8.png" class="img-fluid"></p>
+<p>We analyzed yield volatility across five market asset classes, focusing on the magnitude of their daily volatility as well as periods of extreme volatility. S&amp;P 500 Index (SP500) yield volatility remained within ±5% most of the time. During periods of market turbulence, there were significant extremes of volatility. The volatility pattern of Dow Jones is almost identical to that of S&amp;P 500. The crude oil market has been the most volatile, especially in April 2020 when there was a historic extreme decline (close to -300%). The crude oil market shows a high degree of risk and volatility and requires special attention. The overall performance of the gold market has been relatively stable, with low volatility in yields. There are fewer extreme volatility points, reflecting gold’s characteristics as a safe-haven asset and relative safety during market crises. Nasdaq’s volatility pattern is similar to that of the S&amp;P 500, but with slightly higher volatility. The characteristics of technology stocks make them more sensitive to market fluctuations and prone to dramatic changes in times of crisis.</p>
+</section>
+<section id="supervised-learning" class="level2">
+<h2 class="anchored" data-anchor-id="supervised-learning">Supervised-learning</h2>
+<p>The purpose of this section is to forecast financial results and market behavior. The main focus is on predicting the future direction of the Dow Jones and the return of the Dow Jones over the next 5 days, which are classification and regression problems, respectively.</p>
+<p><img src="photos/figure9.png" class="img-fluid"> <img src="photos/figure10.png" class="img-fluid"></p>
+<p>In order to determine the direction of Dow Jones rise or fall, the logistic regression model performs well with an accuracy of 95% and an area under the ROC curve of 0.96, which indicates the model’s strong differentiation ability.</p>
+<p><img src="photos/figure11.png" class="img-fluid"> <img src="photos/figure12.png" class="img-fluid"></p>
+<p>In predicting future Dow Jones returns for the next 5 days, I used multiple models for comparison. Linear regression and random forest performed poorly, so LightGBM and XGboost were used. After adding lagged features, rolling statistical features and parameter tuning, the model performed well. Among them, the XGboost model performed the best. After that we used the XGboost model to predict future yields with a downward trend.</p>
+<p>In terms of determining the direction of market rise or fall, the logistic regression model performs well with an accuracy of 95% and an area under the ROC curve of 0.96, which indicates the model’s strong differentiation ability.</p>
+<p>From the results, indicators such as historical returns and market volatility play an important role in predicting short-term market trends. Linear models are effective in dealing with simple trends, but nonlinear models such as XGBoost and LightGBM are able to perform better when facing complex market dynamics. This also reflects the fact that market performance is affected by a combination of factors and it is difficult to capture all the patterns in simple methods.</p>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>The analysis shows that the machine learning models XGBoost and LightGBM show potential for predicting short-term stock market returns, such as the 5-day future return of the Dow Jones Index. These models are able to capture the overall trend in returns, and the predicted values ​​are in good agreement with actual observations, more significantly in the middle range of returns. However, forecast accuracy under extreme returns is not perfect, which illustrates that short-term stock market forecasting still faces challenges and limitations.</p>
+<p>Secondly, regarding the impact of macroeconomic factors, research results show that GDP, consumer price index (CPI), unemployment rate and federal funds interest rate all have an impact on the Dow Jones Index, S&amp;P 500 Index, Nasdaq Index, gold and other markets. Make an impact. Have a greater impact on performance. The study found that GDP has a significant impact on the stock market index at all time intervals, representing a strong correlation between the overall economy and market performance. We found that the S&amp;P 500 Index and the Dow Jones Index are more sensitive to inflationary pressure, and CPI has the most obvious impact on these stock market indexes. While the unemployment rate also had a strong impact on the stock market, it had a smaller impact on commodities such as oil and gold. In addition, the federal funds rate has a large and persistent impact on the Dow Jones Industrial Average, showing the importance of monetary policy to market dynamics.</p>
+<p>The analysis also explores the ability to identify abnormal market behavior through technical indicators and volatility analysis. The findings indicate that during extreme market events, stock markets exhibit similar volatility patterns and tend to move together. We find that the most volatile price movements occur in the oil market, possibly due to specific historical events such as geopolitical conflicts and supply disruptions: major events such as the Gulf War, the Iraq War or tensions in the Middle East that could disrupt the global economy. Gold has shown relatively stable behavior, confirming its role as a safe-haven asset, and while further analysis is needed to establish specific correlations, our ability to identify these market anomalies through technical indicators suggests. potential relationships between factors.</p>
+<p>Regarding the characteristic patterns of different market assets, we mainly find that the stock market indexes (NASDAQ, Dow Jones, S&amp;P 500 Index) show strong correlations. It can be seen that their trend patterns are similar, while gold shows a unique avoidance Risk characteristics and correlations with other assets are low. These findings can guide the allocation of different asset classes to achieve an ideal risk-return profile, which is of great significance to portfolio optimization.</p>
+<p>Overall, the key findings presented in this report provide insights into the dynamics and predictability of stock market performance, the impact of macroeconomic factors, identification of market anomalies, and implications for portfolio optimization. While short-term stock market returns can be predicted to some extent, there is room for improvement in the accuracy and robustness of these forecasts during periods of heightened market volatility.</p>
+</section>
+<section id="reference" class="level1">
+<h1>Reference</h1>
+<p><a href="https://academic.oup.com/rfs/article-abstract/15/3/751/1603456?redirectedFrom=fulltext" class="uri">https://academic.oup.com/rfs/article-abstract/15/3/751/1603456?redirectedFrom=fulltext</a></p>
+<p>Andersen, T. (1996). Return Volatility and Trading Volume: An Information Flow Interpretation of Stochastic Volatility. Journal of Finance, 51(1), 169-204.</p>
+<p>Boyd, J. H., Hu, J., &amp; Jagannathan, R. (2005). The Stock Market’s Reaction to Unemployment News: Why Bad News Is Usually Good for Stocks. Journal of Finance, 60(2), 649-672.</p>
+<p>Flannery, M., &amp; Protopapadakis, A. (2002). Macroeconomic Factors Do Influence Aggregate Stock Returns. The Review of Financial Studies, 15(3), 751-782.</p>
+<p>Guennioui, Omaima, Dalila Chiadmi, and Mustapha Amghar. “Improving Global Stock Market Prediction with XGBoost and LightGBM Machine Learning Models.”</p>
+<p>An Empirical Study of Macroeconomic Factors and Stock Returns in the Context of Economic Uncertainty News Sentiment Using Machine Learning.” Complexity 2022.1 (2022): 4646733.</p>
+<p>Wasserbacher, Helmut, and Martin Spindler. “Machine learning for financial forecasting, planning and analysis: recent developments and pitfalls.” Digital Finance 4.1 (2022): 63-88.</p>
+</section>
+<section id="data-source-1" class="level1">
+<h1>Data Source</h1>
+<p>Macroeconomic data: <a href="https://www.bea.gov/tools" class="uri">https://www.bea.gov/tools</a></p>
+<p>National income: <a href="https://fred.stlouisfed.org/" class="uri">https://fred.stlouisfed.org/</a></p>
+<p>Finance market data: <a href="https://finance.yahoo.com/" class="uri">https://finance.yahoo.com/</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

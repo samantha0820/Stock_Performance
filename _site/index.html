@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Landing page – DSAN-5000: Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./assets/gu-logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DSAN-5000: Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./report/report.html"> 
+<span class="menu-text">Report</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-technical-details" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Technical details</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-technical-details">    
+        <li>
+    <a class="dropdown-item" href="./technical-details/data-collection/main.html">
+ <span class="dropdown-text">Data-collection</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./technical-details/data-cleaning/main.html">
+ <span class="dropdown-text">Data-cleaning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./technical-details/eda/main.html">
+ <span class="dropdown-text">Exploratory Data Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./technical-details/unsupervised-learning/main.html">
+ <span class="dropdown-text">Unsupervised Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./technical-details/supervised-learning/main.html">
+ <span class="dropdown-text">Supervised Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./technical-details/progress-log.html">
+ <span class="dropdown-text">Progress Log</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./technical-details/llm-usage-log.html">
+ <span class="dropdown-text">LLM usage Log</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about-us" id="toc-about-us" class="nav-link active" data-scroll-target="#about-us">About us</a>
+  <ul class="collapse">
+  <li><a href="#member-1---shengmian-wang" id="toc-member-1---shengmian-wang" class="nav-link" data-scroll-target="#member-1---shengmian-wang">Member 1 - Shengmian Wang</a></li>
+  <li><a href="#member-2---hailing-liao" id="toc-member-2---hailing-liao" class="nav-link" data-scroll-target="#member-2---hailing-liao">Member 2 - Hailing Liao</a></li>
+  <li><a href="#my-professional-experience" id="toc-my-professional-experience" class="nav-link" data-scroll-target="#my-professional-experience">My professional experience</a></li>
+  </ul></li>
+  <li><a href="#research-questions" id="toc-research-questions" class="nav-link" data-scroll-target="#research-questions">Research Questions</a></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">Literature Review</a>
+  <ul class="collapse">
+  <li><a href="#global-stock-market-prediction-with-xgboost-and-lightgbm-machine-learning-models" id="toc-global-stock-market-prediction-with-xgboost-and-lightgbm-machine-learning-models" class="nav-link" data-scroll-target="#global-stock-market-prediction-with-xgboost-and-lightgbm-machine-learning-models">1. Global Stock Market Prediction with XGBoost and LightGBM Machine Learning Models</a></li>
+  <li><a href="#macroeconomic-factors-and-stock" id="toc-macroeconomic-factors-and-stock" class="nav-link" data-scroll-target="#macroeconomic-factors-and-stock">2. Macroeconomic Factors and Stock</a></li>
+  <li><a href="#benefits-of-machine-learning-in-financial-forecasting" id="toc-benefits-of-machine-learning-in-financial-forecasting" class="nav-link" data-scroll-target="#benefits-of-machine-learning-in-financial-forecasting">3. Benefits of Machine Learning in Financial Forecasting</a></li>
+  <li><a href="#macroeconomic-factors-and-stock-returns" id="toc-macroeconomic-factors-and-stock-returns" class="nav-link" data-scroll-target="#macroeconomic-factors-and-stock-returns">4. Macroeconomic Factors and Stock Returns</a></li>
+  <li><a href="#analyze-return-volatility-and-volume" id="toc-analyze-return-volatility-and-volume" class="nav-link" data-scroll-target="#analyze-return-volatility-and-volume">5. Analyze Return Volatility and Volume</a></li>
+  <li><a href="#the-impact-of-economic-news-on-the-stock-market" id="toc-the-impact-of-economic-news-on-the-stock-market" class="nav-link" data-scroll-target="#the-impact-of-economic-news-on-the-stock-market">6. The Impact of Economic News on the Stock Market</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Landing page</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="about-us" class="level2">
+<h2 class="anchored" data-anchor-id="about-us">About us</h2>
+<section id="member-1---shengmian-wang" class="level3">
+<h3 class="anchored" data-anchor-id="member-1---shengmian-wang">Member 1 - Shengmian Wang</h3>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
+<p>Hello! My name is Shengmian Wang. I am a first-year student in the Data Science and Analytics(DSAN) masters program at Georgetown University. I completed my undergraduate studies in Taiwan with a major of Information Management.</p>
+</section>
+<section id="professional-experience" class="level4">
+<h4 class="anchored" data-anchor-id="professional-experience">Professional Experience</h4>
+<p>With two years of full-time experience as a data analyst and school learning, I have developed a robust skill set in transforming complex data into actionable intelligence. My professional background has equipped me with:</p>
+<p><strong>Data Analysis &amp; Visualization</strong></p>
+<ul>
+<li><p>Leveraged Python (Pandas, NumPy) and R to analyze large-scale datasets, including geospatial data and user reviews, ensuring high data quality and accuracy</p></li>
+<li><p>Created interactive dashboards using Power BI and SPSS that significantly improved decision-making efficiency and delivered actionable insights to diverse clients</p></li>
+<li><p>Conducted comprehensive exploratory data analysis (EDA) using SQL and BigQuery, driving substantial increases in user engagement and identifying key business patterns</p></li>
+<li><p>Generated extensive analytical reports using SPSS and Excel, translating complex data into clear insights for stakeholders</p></li>
+</ul>
+<p><strong>Machine Learning &amp; Statistical Analysis</strong></p>
+<ul>
+<li><p>Implemented various machine learning models (Decision Tree, K-means, KNN) achieving high accuracy in predicting consumer behavior patterns</p></li>
+<li><p>Applied advanced statistical methods including Chi-Square tests, Logistic Regression, and Bayes’ Theorem to analyze adoption patterns and consumer behavior</p></li>
+<li><p>Developed NLP pipelines utilizing BioBERT embeddings and cosine similarity for sentiment analysis and classification</p></li>
+<li><p>Optimized model performance through feature engineering and parameter tuning, significantly improving data accuracy</p></li>
+</ul>
+<p><strong>Data Collection &amp; Processing</strong></p>
+<ul>
+<li><p>Automated data collection processes using Selenium, successfully gathering extensive data entries and user reviews from multiple sources</p></li>
+<li><p>Developed a VBA-based format check tool that substantially increased data validation efficiency</p></li>
+<li><p>Created efficient data processing pipelines to handle various data formats (CSV, JSON, API responses)</p></li>
+<li><p>Optimized SQL queries for Google Analytics transitions, enhancing implementation efficiency</p></li>
+</ul>
+</section>
+<section id="connect-with-me" class="level4">
+<h4 class="anchored" data-anchor-id="connect-with-me">Connect with me</h4>
+<ul>
+<li><p><a href="https://linkedin.com/in/samantha-wang99820/">LinkedIn</a> - Professional Profile</p></li>
+<li><p><a href="https://github.com/samantha0820">GitHub</a> - Project Repository</p></li>
+<li><p><a href="https://yourportfolio.com">Portfolio</a> - Project Showcase</p></li>
+<li><p>Email: wsm19990820@gmail.com</p></li>
+<li><p>Phone: (571) 276-6276</p></li>
+</ul>
+</section>
+</section>
+<section id="member-2---hailing-liao" class="level3">
+<h3 class="anchored" data-anchor-id="member-2---hailing-liao">Member 2 - Hailing Liao</h3>
+<section id="introduction-1" class="level4">
+<h4 class="anchored" data-anchor-id="introduction-1">Introduction</h4>
+<p>Hello! My name is Hailing Liao. I am also a first-year student in the Data Science and Analytics(DSAN) masters program at Georgetown University. I completed my undergraduate studies in Zhongnan University of Economics and Law, majored in Information management and Information system.</p>
+</section>
+<section id="why-choose-data-science" class="level4">
+<h4 class="anchored" data-anchor-id="why-choose-data-science">Why choose data science?</h4>
+<p>During my undergraduate study, I found myself a strong interest in data analytics through relevant coursework called “Commercial Data Analysis”. I developed a strong interest in business analytics and data visualization, which led me to work on several related projects. This experience deepened my interest in data science. So I chose my graduate study at Georgetown University. In the DSAN program, I hope to build solid programming skills and apply them to my future work. Although I feel like my current programming abilities need a lot of work, I’m eager to learn and make the most of this program. After graduation, my goal is to join a leading firm as a data analyst.</p>
+</section>
+</section>
+<section id="my-professional-experience" class="level3">
+<h3 class="anchored" data-anchor-id="my-professional-experience">My professional experience</h3>
+<p>I haven’t worked full time, and after my undergrad graduation gap for a year to prepare for various exams and materials for grad school. I previously had a two-month stint as a business analytics intern at Johnson &amp; Johnson. While there, I - using data analysis tools, including Tableau and Python - analyzed sales data from over 10 retail stores. I then conducted detailed interviews and analyzed customer traffic to develop tailored promotional strategies for contact lens brands, contributing to increased sales conversions.</p>
+<section id="connect-with-me-1" class="level4">
+<h4 class="anchored" data-anchor-id="connect-with-me-1">Connect with me</h4>
+<ul>
+<li><p><a href="https://www.linkedin.com/in/hailing-liao-b66a13334/">LinkedIn</a> - Professional Profile</p></li>
+<li><p><a href="https://github.com/hailing24">GitHub</a> - Project Repository</p></li>
+<li><p><a href="https://yourportfolio.com">Portfolio</a> - Project Showcase</p></li>
+<li><p>Email: haileyyy.liao@gmail.com</p></li>
+<li><p>Phone: (202) 975-9385</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="research-questions" class="level2">
+<h2 class="anchored" data-anchor-id="research-questions">Research Questions</h2>
+<ol type="1">
+<li><strong>Can the short-term returns of the stock market be predicted?</strong>
+<ul>
+<li>Implementing machine learning models (XGBoost, LightGBM)</li>
+<li>Analyzing technical indicators’ predictive power</li>
+<li>Evaluating prediction accuracy across different market conditions</li>
+</ul></li>
+<li><strong>How do GDP, CPI, unemployment rate and federal funds rate affect the performance of different markets (Dow Jones, S&amp;P 500, Nasdaq, gold, crude oil)?</strong>
+<ul>
+<li><p>Studying impacts of GDP, CPI, unemployment rate, and federal funds rate</p></li>
+<li><p>Analyzing cross-market effects</p></li>
+<li><p>Identifying key economic drivers for different assets</p></li>
+</ul></li>
+<li><strong>How to identify abnormal market behavior through technical indicators and volatility analysis, and is there a correlation between these abnormalities and macroeconomic indicators?</strong>
+<ul>
+<li><p>Developing volatility analysis frameworks</p></li>
+<li><p>Correlating market anomalies with technical indicators</p></li>
+<li><p>Examining relationships with macroeconomic factors</p></li>
+</ul></li>
+<li><strong>What characteristic patterns do different market assets (stocks, gold, crude oil) show in different clusters? What implications do these patterns have for portfolio allocation?</strong>
+<ul>
+<li><p>Implementing cluster analysis for market segmentation</p></li>
+<li><p>Analyzing asset behavior patterns</p></li>
+<li><p>Developing portfolio allocation strategies</p></li>
+</ul></li>
+<li><strong>How do each market perform in terms of future return (Future_Return)? What is the correlation between this performance and its technical indicator characteristics?</strong>
+<ul>
+<li><p>Examining future return patterns</p></li>
+<li><p>Analyzing technical indicator relationships</p></li>
+<li><p>Developing predictive frameworks</p></li>
+</ul></li>
+</ol>
+</section>
+<section id="literature-review" class="level2">
+<h2 class="anchored" data-anchor-id="literature-review">Literature Review</h2>
+<section id="global-stock-market-prediction-with-xgboost-and-lightgbm-machine-learning-models" class="level3">
+<h3 class="anchored" data-anchor-id="global-stock-market-prediction-with-xgboost-and-lightgbm-machine-learning-models">1. Global Stock Market Prediction with XGBoost and LightGBM Machine Learning Models</h3>
+<p>Guennioui, Omaima, Dalila Chiadmi, and Mustapha Amghar explore the application of machine learning techniques LightGBM and XGBoost in stock market trend prediction and propose a hybrid model Global XGBoost-LightGBM that is tested by harmonizing parameter settings over tested on multiple stock series. The experiments are conducted on two different stock markets, the United States and Morocco, and the results show that the hybrid model combining LightGBM and XGBoost is able to effectively capture stock price fluctuations, significantly improve prediction accuracy, and address the challenges of stock market forecasting. <em>Guennioui, Omaima, Dalila Chiadmi, and Mustapha Amghar. “Improving Global Stock Market Prediction with XGBoost and LightGBM Machine Learning Models.”</em></p>
+</section>
+<section id="macroeconomic-factors-and-stock" class="level3">
+<h3 class="anchored" data-anchor-id="macroeconomic-factors-and-stock">2. Macroeconomic Factors and Stock</h3>
+<p>A variety of complex economic factors and scenarios can affect stock returns, including interest rates, exchange rates, company performance, political situations, current events, economic conditions, market psychology, natural disasters and government policies. Theoretically, macroeconomic variables are considered to be the main source of stock volatility. Therefore, these factors are the main indicators of stock returns. <em>Jabeen, Ayesha, et al.&nbsp;“An Empirical Study of Macroeconomic Factors and Stock Returns in the Context of Economic Uncertainty News Sentiment Using Machine Learning.” Complexity 2022.1 (2022): 4646733.</em></p>
+</section>
+<section id="benefits-of-machine-learning-in-financial-forecasting" class="level3">
+<h3 class="anchored" data-anchor-id="benefits-of-machine-learning-in-financial-forecasting">3. Benefits of Machine Learning in Financial Forecasting</h3>
+<p>Machine learning methods are well suited to the core tasks of financial forecasting, planning, and analysis, primarily because of their focus on predictive performance, their ability to identify generalizable patterns, and their applicability to new data. In addition, many off-the-shelf machine learning algorithms perform well across a wide range of tasks and are technically easy to use, making them highly attractive to real-world applicators.<em>Wasserbacher, Helmut, and Martin Spindler. “Machine learning for financial forecasting, planning and analysis: recent developments and pitfalls.” Digital Finance 4.1 (2022): 63-88.</em></p>
+</section>
+<section id="macroeconomic-factors-and-stock-returns" class="level3">
+<h3 class="anchored" data-anchor-id="macroeconomic-factors-and-stock-returns">4. Macroeconomic Factors and Stock Returns</h3>
+<p>Flannery and Protopapadakis (2002) proposed a comprehensive GARCH model to analyze the relationship between macroeconomic factors and stock returns. Their study identified six major macroeconomic factors that influence total stock returns—three nominal factors (Consumer Price Index, Producer Price Index, and Monetary Aggregates) and three real factors (trade balance, employment, and housing construction ). However, traditional indicators of economic activity have limited impact, showing that market dynamics are non-linear and complex. <em>Andersen, T. (1996). Return Volatility and Trading Volume: An Information Flow Interpretation of Stochastic Volatility. Journal of Finance, 51(1), 169-204.</em></p>
+</section>
+<section id="analyze-return-volatility-and-volume" class="level3">
+<h3 class="anchored" data-anchor-id="analyze-return-volatility-and-volume">5. Analyze Return Volatility and Volume</h3>
+<p>Andersen (1996) developed an empirical model based on a microstructural framework to examine the relationship between return volatility and trading volume. This study uses stochastic volatility procedures to improve forecast accuracy by focusing on information asymmetry and liquidity needs in trading patterns. The results demonstrate the superiority of the modified mixture distribution hypothesis (MDH) in dynamic modeling of information flow. <em>Boyd, J. H., Hu, J., &amp; Jagannathan, R. (2005). The Stock Market’s Reaction to Unemployment News: Why Bad News Is Usually Good for Stocks. Journal of Finance, 60(2), 649-672.</em></p>
+</section>
+<section id="the-impact-of-economic-news-on-the-stock-market" class="level3">
+<h3 class="anchored" data-anchor-id="the-impact-of-economic-news-on-the-stock-market">6. The Impact of Economic News on the Stock Market</h3>
+<p>Boyd, Jagannathan, and Hu (NBER working paper) provide an original study that examines how unemployment news affects the stock market differently during different business cycles. Their research shows that news of rising unemployment is generally good for stocks during periods of economic expansion but has a negative impact on stocks during periods of economic contraction, and highlights how economic news brings together multiple types of information (interest rate expectations and future corporate earnings) , thus having different impacts on stock values ​​depending on economic conditions.<em>Flannery, M., &amp; Protopapadakis, A. (2002). Macroeconomic Factors Do Influence Aggregate Stock Returns. The Review of Financial Studies, 15(3), 751-782.</em></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

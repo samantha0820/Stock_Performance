@@ -1,0 +1,135 @@
+---
+title: "Landing page"
+---
+
+## About us
+
+### Member 1 - Shengmian Wang
+
+#### Introduction
+
+Hello! My name is Shengmian Wang. I am a first-year student in the Data Science and Analytics(DSAN) masters program at Georgetown University. I completed my undergraduate studies in Taiwan with a major of Information Management.
+
+#### Professional Experience
+
+With two years of full-time experience as a data analyst and school learning, I have developed a robust skill set in transforming complex data into actionable intelligence. My professional background has equipped me with:
+
+**Data Analysis & Visualization**
+
+-   Leveraged Python (Pandas, NumPy) and R to analyze large-scale datasets, including geospatial data and user reviews, ensuring high data quality and accuracy
+
+-   Created interactive dashboards using Power BI and SPSS that significantly improved decision-making efficiency and delivered actionable insights to diverse clients
+
+-   Conducted comprehensive exploratory data analysis (EDA) using SQL and BigQuery, driving substantial increases in user engagement and identifying key business patterns
+
+-   Generated extensive analytical reports using SPSS and Excel, translating complex data into clear insights for stakeholders
+
+**Machine Learning & Statistical Analysis**
+
+-   Implemented various machine learning models (Decision Tree, K-means, KNN) achieving high accuracy in predicting consumer behavior patterns
+
+-   Applied advanced statistical methods including Chi-Square tests, Logistic Regression, and Bayes' Theorem to analyze adoption patterns and consumer behavior
+
+-   Developed NLP pipelines utilizing BioBERT embeddings and cosine similarity for sentiment analysis and classification
+
+-   Optimized model performance through feature engineering and parameter tuning, significantly improving data accuracy
+
+**Data Collection & Processing**
+
+-   Automated data collection processes using Selenium, successfully gathering extensive data entries and user reviews from multiple sources
+
+-   Developed a VBA-based format check tool that substantially increased data validation efficiency
+
+-   Created efficient data processing pipelines to handle various data formats (CSV, JSON, API responses)
+
+-   Optimized SQL queries for Google Analytics transitions, enhancing implementation efficiency
+
+#### Connect with me
+
+-   [LinkedIn](https://linkedin.com/in/samantha-wang99820/) - Professional Profile
+
+-   [GitHub](https://github.com/samantha0820) - Project Repository
+
+-   [Portfolio](https://yourportfolio.com) - Project Showcase
+
+-   Email: wsm19990820\@gmail.com
+
+-   Phone: (571) 276-6276
+
+### Member 2 - Hailing Liao
+
+#### Introduction
+
+Hello! My name is Hailing Liao. I am also a first-year student in the Data Science and Analytics(DSAN) masters program at Georgetown University. I completed my undergraduate studies in Zhongnan University of Economics and Law, majored in Information management and Information system.
+
+#### Why choose data science?
+
+During my undergraduate study, I found myself a strong interest in data analytics through relevant coursework called “Commercial Data Analysis”. I developed a strong interest in business analytics and data visualization, which led me to work on several related projects. This experience deepened my interest in data science. So I chose my graduate study at Georgetown University. In the DSAN program, I hope to build solid programming skills and apply them to my future work. Although I feel like my current programming abilities need a lot of work, I’m eager to learn and make the most of this program. After graduation, my goal is to join a leading firm as a data analyst.
+
+### My professional experience
+
+I haven't worked full time, and after my undergrad graduation gap for a year to prepare for various exams and materials for grad school. I previously had a two-month stint as a business analytics intern at Johnson & Johnson. While there, I - using data analysis tools, including Tableau and Python - analyzed sales data from over 10 retail stores. I then conducted detailed interviews and analyzed customer traffic to develop tailored promotional strategies for contact lens brands, contributing to increased sales conversions.
+
+#### Connect with me
+
+-   [LinkedIn](https://www.linkedin.com/in/hailing-liao-b66a13334/) - Professional Profile
+
+-   [GitHub](https://github.com/hailing24) - Project Repository
+
+-   [Portfolio](https://yourportfolio.com) - Project Showcase
+
+-   Email: haileyyy.liao@gmail.com
+
+-   Phone: (202) 975-9385
+
+## Research Questions
+
+1.  **Can the short-term returns of the stock market be predicted?**
+    -   Implementing machine learning models (XGBoost, LightGBM)
+    -   Analyzing technical indicators' predictive power
+    -   Evaluating prediction accuracy across different market conditions
+2.  **How do GDP, CPI, unemployment rate and federal funds rate affect the performance of different markets (Dow Jones, S&P 500, Nasdaq, gold, crude oil)?**
+    -   Studying impacts of GDP, CPI, unemployment rate, and federal funds rate
+
+    -   Analyzing cross-market effects
+
+    -   Identifying key economic drivers for different assets
+3.  **How to identify abnormal market behavior through technical indicators and volatility analysis, and is there a correlation between these abnormalities and macroeconomic indicators?**
+    -   Developing volatility analysis frameworks
+
+    -   Correlating market anomalies with technical indicators
+
+    -   Examining relationships with macroeconomic factors
+4.  **What characteristic patterns do different market assets (stocks, gold, crude oil) show in different clusters? What implications do these patterns have for portfolio allocation?**
+    -   Implementing cluster analysis for market segmentation
+
+    -   Analyzing asset behavior patterns
+
+    -   Developing portfolio allocation strategies
+5.  **How do each market perform in terms of future return (Future_Return)? What is the correlation between this performance and its technical indicator characteristics?**
+    -   Examining future return patterns
+
+    -   Analyzing technical indicator relationships
+
+    -   Developing predictive frameworks
+
+## Literature Review
+
+### 1. Global Stock Market Prediction with XGBoost and LightGBM Machine Learning Models
+Guennioui, Omaima, Dalila Chiadmi, and Mustapha Amghar explore the application of machine learning techniques LightGBM and XGBoost in stock market trend prediction and propose a hybrid model Global XGBoost-LightGBM that is tested by harmonizing parameter settings over tested on multiple stock series. The experiments are conducted on two different stock markets, the United States and Morocco, and the results show that the hybrid model combining LightGBM and XGBoost is able to effectively capture stock price fluctuations, significantly improve prediction accuracy, and address the challenges of stock market forecasting. *Guennioui, Omaima, Dalila Chiadmi, and Mustapha Amghar. "Improving Global Stock Market Prediction with XGBoost and LightGBM Machine Learning Models."*
+
+### 2. Macroeconomic Factors and Stock
+A variety of complex economic factors and scenarios can affect stock returns, including interest rates, exchange rates, company performance, political situations, current events, economic conditions, market psychology, natural disasters and government policies. Theoretically, macroeconomic variables are considered to be the main source of stock volatility. Therefore, these factors are the main indicators of stock returns. *Jabeen, Ayesha, et al. "An Empirical Study of Macroeconomic Factors and Stock Returns in the Context of Economic Uncertainty News Sentiment Using Machine Learning." Complexity 2022.1 (2022): 4646733.*
+
+### 3. Benefits of Machine Learning in Financial Forecasting
+Machine learning methods are well suited to the core tasks of financial forecasting, planning, and analysis, primarily because of their focus on predictive performance, their ability to identify generalizable patterns, and their applicability to new data. In addition, many off-the-shelf machine learning algorithms perform well across a wide range of tasks and are technically easy to use, making them highly attractive to real-world applicators.*Wasserbacher, Helmut, and Martin Spindler. "Machine learning for financial forecasting, planning and analysis: recent developments and pitfalls." Digital Finance 4.1 (2022): 63-88.*
+
+### 4. Macroeconomic Factors and Stock Returns
+Flannery and Protopapadakis (2002) proposed a comprehensive GARCH model to analyze the relationship between macroeconomic factors and stock returns. Their study identified six major macroeconomic factors that influence total stock returns—three nominal factors (Consumer Price Index, Producer Price Index, and Monetary Aggregates) and three real factors (trade balance, employment, and housing construction ). However, traditional indicators of economic activity have limited impact, showing that market dynamics are non-linear and complex. *Andersen, T. (1996). Return Volatility and Trading Volume: An Information Flow Interpretation of Stochastic Volatility. Journal of Finance, 51(1), 169-204.*
+
+### 5. Analyze Return Volatility and Volume
+Andersen (1996) developed an empirical model based on a microstructural framework to examine the relationship between return volatility and trading volume. This study uses stochastic volatility procedures to improve forecast accuracy by focusing on information asymmetry and liquidity needs in trading patterns. The results demonstrate the superiority of the modified mixture distribution hypothesis (MDH) in dynamic modeling of information flow. *Boyd, J. H., Hu, J., & Jagannathan, R. (2005). The Stock Market's Reaction to Unemployment News: Why Bad News Is Usually Good for Stocks. Journal of Finance, 60(2), 649-672.*
+
+### 6. The Impact of Economic News on the Stock Market
+Boyd, Jagannathan, and Hu (NBER working paper) provide an original study that examines how unemployment news affects the stock market differently during different business cycles. Their research shows that news of rising unemployment is generally good for stocks during periods of economic expansion but has a negative impact on stocks during periods of economic contraction, and highlights how economic news brings together multiple types of information (interest rate expectations and future corporate earnings) , thus having different impacts on stock values ​​depending on economic conditions.*Flannery, M., & Protopapadakis, A. (2002). Macroeconomic Factors Do Influence Aggregate Stock Returns. The Review of Financial Studies, 15(3), 751-782.*
+

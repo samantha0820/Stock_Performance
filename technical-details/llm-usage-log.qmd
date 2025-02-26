@@ -1,0 +1,55 @@
+---
+title: "LLM usage log"
+---
+
+This page can serve as a "catch-all" for LLM use cases that don’t involve content creation, such as reformatting your own ideas, commenting code that you wrote, or proofreading text, PDF summarization.
+
+LLM tools were used in the following way for the tasks below
+
+## Brainstorming:
+
+- **Project Workflow Design**:  
+  Assisted in clarifying and refining project objectives, aligning data collection, EDA, and machine learning processes.  
+- **Research Questions**:  
+  Helped focus on key research questions, such as the relationship between macroeconomic indicators and asset returns.
+
+## Writing: 
+
+- **Summarizing Results**:  
+  Simplified complex technical findings into clear explanations for non-technical readers.  
+- **Improving Flow and Clarity**:  
+  Suggested improvements to sentence structure and paragraph flow to ensure the report was logical and easy to follow.  
+- **Consistent Terminology**:  
+  Ensured that technical terms (e.g., “PCA”, “K-means”, “correlation”) were used consistently across the report to avoid confusion for readers.
+- **Formatting Enhancements**:  
+  Recommended improvements in formatting, such as bullet points, subheadings, and visual aids, to enhance the overall presentation and readability. 
+- **Proofreading and Editing**:  
+  Reviewed grammar, clarity, and consistency to ensure a polished and professional report.  
+  Minor edits were made to ensure the tone was appropriate for a non-technical audience.  
+
+
+## Code: 
+
+- **Code Documentation**:  
+  Added detailed comments to explain the logic behind EDA and unsupervised learning code. This made the code more accessible to non-technical readers and easier to follow.
+- **Model Selection Assistance**:  
+  Provided guidance on selecting appropriate models for different problems, such as recommending Logistic regression for predicting the Future Direction of the Dow Jones Index.
+- **Debugging**:  
+  - Assisted in resolving minor errors during **data collection** and **data cleaning**, such as issues with missing values, inconsistent formats, or runtime errors.  
+  - Provided suggestions for debugging in the EDA phase, including fixing visualizations and ensuring clean outputs.  
+- **Code Readability and Organization**:  
+  Improved the structure and readability of scripts by recommending modular code (e.g., breaking long processes into smaller functions).  
+- **Interpretation of Unsupervised Code**:  
+  Clarified the purpose and logic of K-Means clustering and PCA code, making the results easier to interpret for a general audience. 
+  Propose methods to merge dataset to facilitate unsupervised- learning later on.
+
+## ** Evaluation Metrics Guidance**
+- **Model Performance Interpretation**:  
+  Provided intuitive explanations of metrics such as **Precision, Recall** for classification tasks and **R², MSE** for regression tasks, ensuring results were understandable.  
+- **Optimization Methods**:  
+  Suggested improvements to enhance model performance, such as hyperparameter tuning in XGboost and LightGBM.
+
+## Results Interpretation
+- **Visual Analysis Summaries**:  
+  Provided initial observations on visual outputs, such as correlation heatmaps, PCA scatter plots, and K-means clustering results.  
+

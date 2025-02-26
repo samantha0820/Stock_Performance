@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Collection – DSAN-5000: Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/gu-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">DSAN-5000: Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../instructions/overview.html"> 
+<span class="menu-text">Instructions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../report/report.html"> 
+<span class="menu-text">Report</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-technical-details" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Technical details</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-technical-details">    
+        <li>
+    <a class="dropdown-item" href="../../technical-details/data-collection/main.html">
+ <span class="dropdown-text">Data-collection</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/data-cleaning/main.html">
+ <span class="dropdown-text">Data-cleaning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/eda/main.html">
+ <span class="dropdown-text">Exploratory Data Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/unsupervised-learning/main.html">
+ <span class="dropdown-text">Unsupervised Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/supervised-learning/main.html">
+ <span class="dropdown-text">Supervised Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/progress-log.html">
+ <span class="dropdown-text">Progress Log</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../technical-details/llm-usage-log.html">
+ <span class="dropdown-text">LLM usage Log</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a>
+  <ul class="collapse">
+  <li><a href="#introduction-and-motivation" id="toc-introduction-and-motivation" class="nav-link" data-scroll-target="#introduction-and-motivation">Introduction and Motivation</a></li>
+  <li><a href="#overview-of-methods" id="toc-overview-of-methods" class="nav-link" data-scroll-target="#overview-of-methods">Overview of Methods</a></li>
+  <li><a href="#data-requirements" id="toc-data-requirements" class="nav-link" data-scroll-target="#data-requirements">Data Requirements</a>
+  <ul class="collapse">
+  <li><a href="#data-formats" id="toc-data-formats" class="nav-link" data-scroll-target="#data-formats">Data Formats</a></li>
+  <li><a href="#target-variables" id="toc-target-variables" class="nav-link" data-scroll-target="#target-variables">Target Variables</a></li>
+  </ul></li>
+  <li><a href="#implementation-requirements" id="toc-implementation-requirements" class="nav-link" data-scroll-target="#implementation-requirements">Implementation Requirements</a>
+  <ul class="collapse">
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
+  <li><a href="#data-storage" id="toc-data-storage" class="nav-link" data-scroll-target="#data-storage">Data Storage</a></li>
+  </ul></li>
+  <li><a href="#documentation-requirements" id="toc-documentation-requirements" class="nav-link" data-scroll-target="#documentation-requirements">Documentation Requirements</a></li>
+  <li><a href="#workflow-description" id="toc-workflow-description" class="nav-link" data-scroll-target="#workflow-description">Workflow Description</a></li>
+  <li><a href="#quality-assurance" id="toc-quality-assurance" class="nav-link" data-scroll-target="#quality-assurance">Quality Assurance</a></li>
+  </ul></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a>
+  <ul class="collapse">
+  <li><a href="#comprehensive-data-aggregation" id="toc-comprehensive-data-aggregation" class="nav-link" data-scroll-target="#comprehensive-data-aggregation">1. Comprehensive Data Aggregation</a></li>
+  <li><a href="#data-quality-and-consistency" id="toc-data-quality-and-consistency" class="nav-link" data-scroll-target="#data-quality-and-consistency">2. Data Quality and Consistency</a></li>
+  <li><a href="#research-enablement" id="toc-research-enablement" class="nav-link" data-scroll-target="#research-enablement">3. Research Enablement</a></li>
+  <li><a href="#methodological-transparency" id="toc-methodological-transparency" class="nav-link" data-scroll-target="#methodological-transparency">4. Methodological Transparency</a></li>
+  </ul></li>
+  <li><a href="#significance" id="toc-significance" class="nav-link" data-scroll-target="#significance">Significance</a></li>
+  <li><a href="#key-deliverables" id="toc-key-deliverables" class="nav-link" data-scroll-target="#key-deliverables">Key Deliverables</a></li>
+  </ul></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#data-collection-strategies" id="toc-data-collection-strategies" class="nav-link" data-scroll-target="#data-collection-strategies">1. Data Collection Strategies</a>
+  <ul class="collapse">
+  <li><a href="#a-fred-federal-reserve-economic-data-api" id="toc-a-fred-federal-reserve-economic-data-api" class="nav-link" data-scroll-target="#a-fred-federal-reserve-economic-data-api">a) FRED (Federal Reserve Economic Data) API</a></li>
+  <li><a href="#b-bea-bureau-of-economic-analysis-api" id="toc-b-bea-bureau-of-economic-analysis-api" class="nav-link" data-scroll-target="#b-bea-bureau-of-economic-analysis-api">b) BEA (Bureau of Economic Analysis) API</a></li>
+  <li><a href="#c-yahoo-finance-api-yfinance" id="toc-c-yahoo-finance-api-yfinance" class="nav-link" data-scroll-target="#c-yahoo-finance-api-yfinance">c) Yahoo Finance API (yfinance)</a></li>
+  </ul></li>
+  <li><a href="#data-processing-techniques" id="toc-data-processing-techniques" class="nav-link" data-scroll-target="#data-processing-techniques">2. Data Processing Techniques</a>
+  <ul class="collapse">
+  <li><a href="#file-and-directory-management" id="toc-file-and-directory-management" class="nav-link" data-scroll-target="#file-and-directory-management">File and Directory Management</a></li>
+  <li><a href="#api-request-handling" id="toc-api-request-handling" class="nav-link" data-scroll-target="#api-request-handling">API Request Handling</a></li>
+  <li><a href="#data-transformation" id="toc-data-transformation" class="nav-link" data-scroll-target="#data-transformation">Data Transformation</a></li>
+  </ul></li>
+  <li><a href="#modular-design-principles" id="toc-modular-design-principles" class="nav-link" data-scroll-target="#modular-design-principles">3. Modular Design Principles</a></li>
+  <li><a href="#security-and-configuration" id="toc-security-and-configuration" class="nav-link" data-scroll-target="#security-and-configuration">4. Security and Configuration</a></li>
+  <li><a href="#output-and-persistence" id="toc-output-and-persistence" class="nav-link" data-scroll-target="#output-and-persistence">5. Output and Persistence</a></li>
+  <li><a href="#technological-stack" id="toc-technological-stack" class="nav-link" data-scroll-target="#technological-stack">Technological Stack</a></li>
+  </ul></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a>
+  <ul class="collapse">
+  <li><a href="#import-data" id="toc-import-data" class="nav-link" data-scroll-target="#import-data">Import data</a></li>
+  <li><a href="#set-the-path-to-store-data" id="toc-set-the-path-to-store-data" class="nav-link" data-scroll-target="#set-the-path-to-store-data">Set the path to store data</a></li>
+  <li><a href="#importing-and-processing-macroeconomic-data-from-fred-api" id="toc-importing-and-processing-macroeconomic-data-from-fred-api" class="nav-link" data-scroll-target="#importing-and-processing-macroeconomic-data-from-fred-api">Importing and Processing Macroeconomic Data from FRED API</a></li>
+  <li><a href="#fetching-10-year-treasury-yield-data-from-fred-api" id="toc-fetching-10-year-treasury-yield-data-from-fred-api" class="nav-link" data-scroll-target="#fetching-10-year-treasury-yield-data-from-fred-api">Fetching 10-Year Treasury Yield Data from FRED API</a></li>
+  <li><a href="#fetching-national-income-and-product-accounts-nipa-data-from-bea-api" id="toc-fetching-national-income-and-product-accounts-nipa-data-from-bea-api" class="nav-link" data-scroll-target="#fetching-national-income-and-product-accounts-nipa-data-from-bea-api">Fetching National Income and Product Accounts (NIPA) Data from BEA API</a>
+  <ul class="collapse">
+  <li><a href="#these-data-tables-include" id="toc-these-data-tables-include" class="nav-link" data-scroll-target="#these-data-tables-include">These data tables include:</a></li>
+  </ul></li>
+  <li><a href="#downloading-market-data-from-yahoo-finance" id="toc-downloading-market-data-from-yahoo-finance" class="nav-link" data-scroll-target="#downloading-market-data-from-yahoo-finance">Downloading Market Data from Yahoo Finance</a>
+  <ul class="collapse">
+  <li><a href="#this-code-fetches-daily-market-data-for-major-indices-and-commodities" id="toc-this-code-fetches-daily-market-data-for-major-indices-and-commodities" class="nav-link" data-scroll-target="#this-code-fetches-daily-market-data-for-major-indices-and-commodities">This code fetches daily market data for major indices and commodities:</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a>
+  <ul class="collapse">
+  <li><a href="#technical-challenges-and-limitations" id="toc-technical-challenges-and-limitations" class="nav-link" data-scroll-target="#technical-challenges-and-limitations">Technical Challenges and Limitations</a></li>
+  <li><a href="#unintended-consequences-and-technical-impact" id="toc-unintended-consequences-and-technical-impact" class="nav-link" data-scroll-target="#unintended-consequences-and-technical-impact">Unintended Consequences and Technical Impact</a>
+  <ul class="collapse">
+  <li><a href="#observed-data-anomaly" id="toc-observed-data-anomaly" class="nav-link" data-scroll-target="#observed-data-anomaly">Observed Data Anomaly</a></li>
+  <li><a href="#computational-insights" id="toc-computational-insights" class="nav-link" data-scroll-target="#computational-insights">Computational Insights</a></li>
+  </ul></li>
+  <li><a href="#conclusion-and-suggestions" id="toc-conclusion-and-suggestions" class="nav-link" data-scroll-target="#conclusion-and-suggestions">Conclusion and Suggestions</a>
+  <ul class="collapse">
+  <li><a href="#key-technical-achievements" id="toc-key-technical-achievements" class="nav-link" data-scroll-target="#key-technical-achievements">Key Technical Achievements</a></li>
+  <li><a href="#actionable-suggestions" id="toc-actionable-suggestions" class="nav-link" data-scroll-target="#actionable-suggestions">Actionable Suggestions</a></li>
+  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts">Final Thoughts</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Collection</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
+<section id="introduction-and-motivation" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-and-motivation">Introduction and Motivation</h2>
+<p>The data collecting part focuses on collecting comprehensive financial and economic data to analyze market performance and economic indicators. Our goal is to collect data from three main sources: - Federal Reserve Economic Data (FRED) for macroeconomic indicators - Bureau of Economic Analysis (BEA) for national accounts data - Yahoo Finance for market performance data</p>
+<p>These sources will help us understand the relationship between economic factors and market behavior.</p>
+</section>
+<section id="overview-of-methods" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-methods">Overview of Methods</h2>
+<p>We use three primary methods for data collection:</p>
+<ol type="1">
+<li>FRED API Collection:
+<ul>
+<li>Fetches macroeconomic indicators (GDP, CPI, Unemployment, etc.)</li>
+<li>Retrieves Treasury yield data</li>
+<li>Collects monetary policy indicators</li>
+</ul></li>
+<li>BEA API Integration:
+<ul>
+<li>Gathers National Income and Product Accounts (NIPA) data</li>
+<li>Collects personal income and consumption metrics</li>
+<li>Obtains government spending information</li>
+</ul></li>
+<li>Yahoo Finance Data Retrieval:
+<ul>
+<li>Downloads market index data (S&amp;P 500, Nasdaq, Dow Jones)</li>
+<li>Collects commodity prices (Gold, Crude Oil)</li>
+<li>Processes daily market metrics</li>
+</ul></li>
+</ol>
+</section>
+<section id="data-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="data-requirements">Data Requirements</h2>
+<section id="data-formats" class="level3">
+<h3 class="anchored" data-anchor-id="data-formats">Data Formats</h3>
+<p>Primary focus on tabular data (CSV): - Time series financial data - Economic indicators - Market performance metrics</p>
+</section>
+<section id="target-variables" class="level3">
+<h3 class="anchored" data-anchor-id="target-variables">Target Variables</h3>
+<ol type="1">
+<li>Regression Targets:
+<ul>
+<li>Asset price returns</li>
+<li>Economic growth rates</li>
+<li>Inflation metrics</li>
+</ul></li>
+<li>Binary Classification Targets:
+<ul>
+<li>Market direction (up/down)</li>
+<li>Economic state (expansion/contraction)</li>
+<li>Yield curve status (normal/inverted)</li>
+</ul></li>
+<li>Multiclass Classification Targets:
+<ul>
+<li>Market conditions (bull/bear/sideways)</li>
+<li>Economic phases (growth/stagnation/recession)</li>
+<li>Trading volume levels (high/medium/low)</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="implementation-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-requirements">Implementation Requirements</h2>
+<section id="data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="data-sources">Data Sources</h3>
+<ol type="1">
+<li>FRED API:
+<ul>
+<li>API Key required</li>
+<li>Multiple series collection</li>
+<li>JSON response processing</li>
+</ul></li>
+<li>BEA API:
+<ul>
+<li>User authentication</li>
+<li>Table-specific requests</li>
+<li>Annual data retrieval</li>
+</ul></li>
+<li>Yahoo Finance:
+<ul>
+<li>No authentication required</li>
+<li>Daily data download</li>
+<li>Multiple asset handling</li>
+</ul></li>
+</ol>
+</section>
+<section id="data-storage" class="level3">
+<h3 class="anchored" data-anchor-id="data-storage">Data Storage</h3>
+<ul>
+<li><p>Save raw data to <code>data/raw-data/</code>:</p>
+<pre><code>data/raw-data/
+├── macro_series_raw_collection.csv
+├── t20100_raw_data.csv
+├── t10105_raw_data.csv
+└── [asset]_raw_a.csv</code></pre></li>
+<li><p>Maintain data integrity</p></li>
+<li><p>Preserve original format</p></li>
+</ul>
+</section>
+</section>
+<section id="documentation-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-requirements">Documentation Requirements</h2>
+<ol type="1">
+<li>Code Documentation:
+<ul>
+<li>Include all API request code</li>
+<li>Document parameter choices</li>
+<li>Explain data processing steps</li>
+</ul></li>
+<li>Data Source Information:
+<ul>
+<li>FRED API: <a href="https://fred.stlouisfed.org/docs/api/fred/" class="uri">https://fred.stlouisfed.org/docs/api/fred/</a></li>
+<li>BEA API: <a href="https://apps.bea.gov/api/" class="uri">https://apps.bea.gov/api/</a></li>
+<li>Yahoo Finance API documentation</li>
+</ul></li>
+<li>Data Collection Methods:
+<ul>
+<li>API interaction processes</li>
+<li>Data download procedures</li>
+<li>Error handling approaches</li>
+</ul></li>
+<li>Data Structure Documentation:
+<ul>
+<li>Column descriptions</li>
+<li>Data types</li>
+<li>Time periods</li>
+<li>Update frequencies</li>
+</ul></li>
+</ol>
+</section>
+<section id="workflow-description" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-description">Workflow Description</h2>
+<ol type="1">
+<li>Setup:
+<ul>
+<li>Configure API keys</li>
+<li>Create storage directories</li>
+<li>Import required libraries</li>
+</ul></li>
+<li>Data Collection:
+<ul>
+<li>Fetch macroeconomic data</li>
+<li>Download market data</li>
+<li>Retrieve national accounts data</li>
+</ul></li>
+<li>Data Verification:
+<ul>
+<li>Check data completeness</li>
+<li>Verify date ranges</li>
+<li>Validate data types</li>
+</ul></li>
+<li>Documentation:
+<ul>
+<li>Record collection process</li>
+<li>Document data structure</li>
+<li>Note any issues or limitations</li>
+</ul></li>
+</ol>
+</section>
+<section id="quality-assurance" class="level2">
+<h2 class="anchored" data-anchor-id="quality-assurance">Quality Assurance</h2>
+<p>Ensure:</p>
+<p>- All API calls are properly authenticated</p>
+<p>- Data is saved in its original form</p>
+<p>- Collection process is reproducible</p>
+<p>- Documentation is complete and clear</p>
+</section>
+</section>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<section id="goals" class="level2">
+<h2 class="anchored" data-anchor-id="goals">Goals</h2>
+<p>The primary goal of this project is to develop a framework for collecting, integrating, and preprocessing economic and financial data from multiple authoritative sources. By creating a systematic approach to data aggregation, we aim to enable advanced economic research, predictive analysis, and data-driven decision-making.</p>
+</section>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>The complexity of economic analysis is fundamentally constrained by consistency, and integration. Existing approaches to economic data collection often suffer from:</p>
+<ul>
+<li><p>Fragmented data sources</p></li>
+<li><p>Inconsistent reporting frequencies</p></li>
+<li><p>Limited cross-source compatibility</p></li>
+</ul>
+</section>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>Our specific objectives are focused on creating a framework for economic data collection, emphasizing comprehensive aggregation, data quality, research potential, and methodological transparency:</p>
+<section id="comprehensive-data-aggregation" class="level3">
+<h3 class="anchored" data-anchor-id="comprehensive-data-aggregation">1. Comprehensive Data Aggregation</h3>
+<ul>
+<li>Collect diverse economic indicators from multiple authoritative sources</li>
+<li>Integrate data from key economic and financial platforms:
+<ul>
+<li>Federal Reserve Economic Data (FRED)</li>
+<li>Bureau of Economic Analysis (BEA)</li>
+<li>Yahoo Finance</li>
+</ul></li>
+<li>Gather a wide range of economic and market performance metrics, including:
+<ul>
+<li>Macroeconomic indicators (GDP, CPI, Unemployment)</li>
+<li>Market indices (S&amp;P 500, Nasdaq, Dow Jones)</li>
+<li>Commodity prices (Gold, Crude Oil)</li>
+<li>Treasury yield data</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-quality-and-consistency" class="level3">
+<h3 class="anchored" data-anchor-id="data-quality-and-consistency">2. Data Quality and Consistency</h3>
+<ul>
+<li>Implement data processing techniques to ensure data reliability</li>
+<li>Address challenges of data integration across different sources</li>
+<li>Develop methods to:
+<ul>
+<li>Handle missing or invalid data points</li>
+<li>Convert and standardize data types</li>
+<li>Merge datasets from multiple sources</li>
+</ul></li>
+<li>Ensure clean, consistent data preparation for further analysis</li>
+</ul>
+</section>
+<section id="research-enablement" class="level3">
+<h3 class="anchored" data-anchor-id="research-enablement">3. Research Enablement</h3>
+<ul>
+<li>Prepare a structured, accessible dataset for economic research</li>
+<li>Save raw collected data in easily manageable CSV format</li>
+<li>Create a foundation for potential future analyses, including:
+<ul>
+<li>Economic trend identification</li>
+<li>Market performance studies</li>
+<li>Macroeconomic indicator exploration</li>
+</ul></li>
+<li>Provide a flexible dataset that supports various research approaches</li>
+</ul>
+</section>
+<section id="methodological-transparency" class="level3">
+<h3 class="anchored" data-anchor-id="methodological-transparency">4. Methodological Transparency</h3>
+<ul>
+<li>Document the entire data collection process comprehensively</li>
+<li>Provide clear, reproducible code for data retrieval</li>
+<li>Explain the rationale behind data source selection</li>
+<li>Ensure other researchers can understand and potentially replicate the data collection methodology</li>
+</ul>
+</section>
+</section>
+<section id="significance" class="level2">
+<h2 class="anchored" data-anchor-id="significance">Significance</h2>
+<p>Bridge the gap between diverse sources and meaningful economic analysis by transforming raw economic data into valuable research resources. We lay the foundation for subsequent analysis by collecting data, managing data quality, research potential, and monitoring economic dynamics.</p>
+</section>
+<section id="key-deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="key-deliverables">Key Deliverables</h2>
+<ul>
+<li><p>Comprehensive CSV datasets covering multiple economic indicators</p></li>
+<li><p>Well-documented data collection methodology</p></li>
+<li><p>Clean, standardized economic and market performance data</p></li>
+</ul>
+</section>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<section id="data-collection-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="data-collection-strategies">1. Data Collection Strategies</h2>
+<section id="a-fred-federal-reserve-economic-data-api" class="level3">
+<h3 class="anchored" data-anchor-id="a-fred-federal-reserve-economic-data-api">a) FRED (Federal Reserve Economic Data) API</h3>
+<ul>
+<li><strong>Purpose</strong>: Retrieve comprehensive macroeconomic indicators</li>
+<li><strong>Series Collected</strong>:
+<ul>
+<li>Gross Domestic Product (GDP)</li>
+<li>Consumer Price Index (CPI)</li>
+<li>Unemployment Rate</li>
+<li>Federal Funds Rate</li>
+<li>Money Supply (M2)</li>
+<li>Consumer Sentiment Index</li>
+<li>Real Estate Price Index</li>
+<li>Exports and Imports Data</li>
+</ul></li>
+<li><strong>Technique</strong>:
+<ul>
+<li>Utilized <code>requests</code> library for API communication</li>
+<li>Converted raw JSON responses into pandas DataFrames</li>
+<li>Standardized date formats and numeric conversions</li>
+<li>Merged multiple economic series into a single comprehensive dataset</li>
+</ul></li>
+</ul>
+</section>
+<section id="b-bea-bureau-of-economic-analysis-api" class="level3">
+<h3 class="anchored" data-anchor-id="b-bea-bureau-of-economic-analysis-api">b) BEA (Bureau of Economic Analysis) API</h3>
+<ul>
+<li><strong>Purpose</strong>: Fetch National Income and Product Accounts (NIPA) data</li>
+<li><strong>Tables Retrieved</strong>:
+<ul>
+<li>T20100: Gross Domestic Product and Personal Consumption</li>
+<li>T10105: National Account Savings and Investment Data</li>
+</ul></li>
+<li><strong>Approach</strong>:
+<ul>
+<li>Created a generic <code>fetch_bea_data()</code> function</li>
+<li>Configured API parameters for annual frequency data</li>
+<li>Handled potential API response variations</li>
+<li>Converted successful responses to CSV for further analysis</li>
+</ul></li>
+</ul>
+</section>
+<section id="c-yahoo-finance-api-yfinance" class="level3">
+<h3 class="anchored" data-anchor-id="c-yahoo-finance-api-yfinance">c) Yahoo Finance API (yfinance)</h3>
+<ul>
+<li><strong>Purpose</strong>: Download market performance data for major indices and commodities</li>
+<li><strong>Assets Retrieved</strong>:
+<ul>
+<li>S&amp;P 500 Index</li>
+<li>Nasdaq Composite</li>
+<li>Dow Jones Industrial Average</li>
+<li>Gold Futures</li>
+<li>Crude Oil Futures</li>
+</ul></li>
+<li><strong>Method</strong>:
+<ul>
+<li>Implemented a flexible <code>fetch_data()</code> function</li>
+<li>Set consistent date ranges for historical data</li>
+<li>Downloaded daily price and volume information</li>
+<li>Standardized data columns and saved as CSV files</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="data-processing-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="data-processing-techniques">2. Data Processing Techniques</h2>
+<section id="file-and-directory-management" class="level3">
+<h3 class="anchored" data-anchor-id="file-and-directory-management">File and Directory Management</h3>
+<ul>
+<li>Used <code>os</code> module for robust file path handling</li>
+<li>Dynamically created output directories</li>
+<li>Implemented consistent file naming conventions</li>
+<li>Ensured data is saved in a structured, accessible format</li>
+</ul>
+</section>
+<section id="api-request-handling" class="level3">
+<h3 class="anchored" data-anchor-id="api-request-handling">API Request Handling</h3>
+<ul>
+<li>Implemented error handling and logging</li>
+<li>Converted API responses to consistent pandas DataFrame structures</li>
+<li>Performed data type conversions (datetime, numeric)</li>
+<li>Managed potential missing or invalid data points</li>
+</ul>
+</section>
+<section id="data-transformation" class="level3">
+<h3 class="anchored" data-anchor-id="data-transformation">Data Transformation</h3>
+<ul>
+<li>Reset DataFrame indexes</li>
+<li>Renamed columns for clarity</li>
+<li>Performed basic data cleaning</li>
+<li>Prepared data for subsequent analysis stages</li>
+</ul>
+</section>
+</section>
+<section id="modular-design-principles" class="level2">
+<h2 class="anchored" data-anchor-id="modular-design-principles">3. Modular Design Principles</h2>
+<ul>
+<li>Created reusable functions for data fetching</li>
+<li>Separated concerns between data collection, processing, and storage</li>
+<li>Used configuration dictionaries for flexible asset and series selection</li>
+<li>Implemented error-tolerant code with try-except blocks</li>
+</ul>
+</section>
+<section id="security-and-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="security-and-configuration">4. Security and Configuration</h2>
+<ul>
+<li>Utilized environment-specific API keys</li>
+<li>Configured date ranges and data retrieval parameters</li>
+<li>Implemented interval and frequency specifications for precise data collection</li>
+</ul>
+</section>
+<section id="output-and-persistence" class="level2">
+<h2 class="anchored" data-anchor-id="output-and-persistence">5. Output and Persistence</h2>
+<ul>
+<li>Saved raw collected data as CSV files</li>
+<li>Maintained a consistent output folder structure</li>
+<li>Enabled easy data inspection and further processing</li>
+</ul>
+</section>
+<section id="technological-stack" class="level2">
+<h2 class="anchored" data-anchor-id="technological-stack">Technological Stack</h2>
+<ul>
+<li><strong>Programming Language</strong>: Python 3.12</li>
+<li><strong>Key Libraries</strong>:
+<ul>
+<li><code>requests</code> for API communication</li>
+<li><code>pandas</code> for data manipulation</li>
+<li><code>yfinance</code> for financial data retrieval</li>
+<li><code>os</code> for file system operations</li>
+</ul></li>
+<li><strong>Data Sources</strong>:
+<ul>
+<li>FRED API</li>
+<li>BEA API</li>
+<li>Yahoo Finance</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="code" class="level1">
+<h1>Code</h1>
+<p>Provide the source code used for this section of the project here.</p>
+<p>If you’re using a package for code organization, you can import it at this point. However, make sure that the <strong>actual workflow steps</strong>—including data processing, analysis, and other key tasks—are conducted and clearly demonstrated on this page. The goal is to show the technical flow of your project, highlighting how the code is executed to achieve your results.</p>
+<p>Ensure that the code is well-commented to enhance readability and understanding for others who may review or use it. If relevant, link to additional documentation or external references that explain any complex components. This section should give readers a clear view of how the project is implemented from a technical perspective.</p>
+<p>This page is a technical narrative, NOT just a notebook with a collection of code cells, include in-line Prose, to describe what is going on.</p>
+<section id="import-data" class="level2">
+<h2 class="anchored" data-anchor-id="import-data">Import data</h2>
+<p>In the following code, we utilize the FRED API (Federal Reserve Economic Data) for macroeconomic data and BEA API (Bureau of Economic Analysis) for assets data. This combination allows us to gather comprehensive economic indicators and market performance data for our analysis.</p>
+</section>
+<section id="set-the-path-to-store-data" class="level2">
+<h2 class="anchored" data-anchor-id="set-the-path-to-store-data">Set the path to store data</h2>
+<div id="cell-7" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os  <span class="co"># Import os module for handling file paths</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the target folder for saving CSV files</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>output_folder <span class="op">=</span> <span class="st">"../../data/raw-data"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the folder if it doesn't exist</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.exists(output_folder):</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    os.makedirs(output_folder)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="importing-and-processing-macroeconomic-data-from-fred-api" class="level2">
+<h2 class="anchored" data-anchor-id="importing-and-processing-macroeconomic-data-from-fred-api">Importing and Processing Macroeconomic Data from FRED API</h2>
+<div id="cell-9" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># API Key</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>API_KEY <span class="op">=</span> <span class="st">"01e2e0f764ac9522003f01e4458beabe"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># FRED API URL</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>base_url <span class="op">=</span> <span class="st">"https://api.stlouisfed.org/fred/series/observations"</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the series IDs to fetch</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>series_ids <span class="op">=</span> {</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GDP"</span>: <span class="st">"GDP"</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CPI"</span>: <span class="st">"CPIAUCSL"</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Unemployment"</span>: <span class="st">"UNRATE"</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FedFundsRate"</span>: <span class="st">"FEDFUNDS"</span>,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"M2"</span>: <span class="st">"M2SL"</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Umscent"</span>: <span class="st">"UMCSENT"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"real_estate"</span>: <span class="st">"CSUSHPINSA"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Exports"</span>: <span class="st">"EXPGS"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Imports"</span>: <span class="st">"IMPGS"</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an empty list to store dataframes</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>data_frames <span class="op">=</span> []</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, series_id <span class="kw">in</span> series_ids.items():</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Construct the API request parameters</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    params <span class="op">=</span> {</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">"series_id"</span>: series_id,</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>        <span class="st">"api_key"</span>: API_KEY,</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">"file_type"</span>: <span class="st">"json"</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Send the API request</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> requests.get(base_url, params<span class="op">=</span>params)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    json_data <span class="op">=</span> response.json()</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract the observations data</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    observations <span class="op">=</span> json_data[<span class="st">"observations"</span>]</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.DataFrame(observations)</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Process the dataframe</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">"value"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"value"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)  <span class="co"># Convert invalid values to NaN</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">"date"</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">"date"</span>])  <span class="co"># Ensure the date column is in datetime format</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> df.rename(columns<span class="op">=</span>{<span class="st">"value"</span>: name})  <span class="co"># Rename the value column to the series name</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> df[[<span class="st">"date"</span>, name]]  <span class="co"># Keep only the date and series value columns</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    data_frames.append(df)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge all the dataframes into a single dataframe</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>merged_data <span class="op">=</span> data_frames[<span class="dv">0</span>]</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> df <span class="kw">in</span> data_frames[<span class="dv">1</span>:]:</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    merged_data <span class="op">=</span> pd.merge(merged_data, df, on<span class="op">=</span><span class="st">"date"</span>, how<span class="op">=</span><span class="st">"outer"</span>)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the raw collected data for inspection or further processing</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>raw_data_file <span class="op">=</span> os.path.join(output_folder, <span class="st">"macro_series_raw_collection.csv"</span>)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>merged_data.to_csv(raw_data_file, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Raw collected data saved to '</span><span class="sc">{</span>raw_data_file<span class="sc">}</span><span class="ss">'."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Data for macro_series saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data/macro_series_raw.csv'.
+          date        GDP    CPI  Unemployment  FedFundsRate      M2  Umscent  \
+640 2000-01-01  10002.179  169.3           4.0          5.45  4667.6    112.0   
+641 2000-02-01  10250.952  170.0           4.1          5.73  4680.9    111.3   
+642 2000-03-01  10250.952  171.0           4.0          5.85  4711.7    107.1   
+643 2000-04-01  10247.720  170.9           3.8          6.02  4767.8    109.2   
+644 2000-05-01  10250.952  171.2           4.0          6.27  4755.7    110.7   
+645 2000-06-01  10250.952  172.2           4.0          6.53  4773.6    106.4   
+646 2000-07-01  10318.165  172.7           4.0          6.54  4791.3    108.3   
+647 2000-08-01  10250.952  172.7           4.1          6.50  4819.5    107.3   
+648 2000-09-01  10250.952  173.6           3.9          6.52  4855.3    106.8   
+649 2000-10-01  10435.744  173.9           3.9          6.51  4871.4    105.8   
+650 2000-11-01  10250.952  174.2           3.9          6.51  4882.8    107.6   
+651 2000-12-01  10250.952  174.6           3.9          6.40  4927.7     98.4   
+652 2001-01-01  10470.231  175.6           4.2          5.98  4978.4     94.7   
+653 2001-02-01  10581.929  176.0           4.2          5.49  5017.1     90.6   
+654 2001-03-01  10581.929  176.1           4.3          5.31  5074.9     91.5   
+655 2001-04-01  10599.000  176.4           4.4          4.80  5139.2     88.4   
+656 2001-05-01  10581.929  177.3           4.3          4.21  5137.3     92.0   
+657 2001-06-01  10581.929  177.7           4.5          3.97  5180.3     92.6   
+658 2001-07-01  10598.020  177.4           4.6          3.77  5210.2     92.4   
+659 2001-08-01  10581.929  177.4           4.9          3.65  5243.9     91.5   
+
+     real_estate     Exports   Imports  year   GDP_YoY   GDP_MoM   CPI_YoY  \
+640      100.000  1052.90400  1409.487  2000  0.062741  0.038522  0.027930   
+641      100.571  1096.11075  1477.184  2000  0.064351  0.024872  0.032180   
+642      101.466  1096.11075  1477.184  2000  0.064351  0.000000  0.037621   
+643      102.541  1093.36000  1455.860  2000  0.075739 -0.000315  0.030139   
+644      103.702  1096.11075  1477.184  2000  0.064351  0.000315  0.031325   
+645      104.856  1096.11075  1477.184  2000  0.064351  0.000000  0.037349   
+646      105.722  1125.00200  1518.869  2000  0.065197  0.006557  0.035993   
+647      106.522  1096.11075  1477.184  2000  0.064351 -0.006514  0.033513   
+648      107.136  1096.11075  1477.184  2000  0.064351  0.000000  0.034565   
+649      107.729  1113.17700  1524.520  2000  0.054098  0.018027  0.034503   
+650      108.292  1096.11075  1477.184  2000  0.064351 -0.017708  0.034442   
+651      108.792  1096.11075  1477.184  2000  0.064351  0.000000  0.034360   
+652      109.215  1096.81200  1499.464  2001  0.046795  0.021391  0.037212   
+653      109.643  1026.81175  1403.559  2001  0.032287  0.010668  0.035294   
+654      110.395  1026.81175  1403.559  2001  0.032287  0.000000  0.029825   
+655      111.248  1058.01300  1422.028  2001  0.034279  0.001613  0.032183   
+656      112.203  1026.81175  1403.559  2001  0.032287 -0.001611  0.035631   
+657      113.273  1026.81175  1403.559  2001  0.032287  0.000000  0.031940   
+658      114.227   998.90200  1369.536  2001  0.027123  0.001521  0.027215   
+659      114.989  1026.81175  1403.559  2001  0.032287 -0.001518  0.027215   
+
+        GDP_Lag1  CPI_Lag1  
+640   9631.17175     168.8  
+641  10002.17900     169.3  
+642  10250.95200     170.0  
+643  10250.95200     171.0  
+644  10247.72000     170.9  
+645  10250.95200     171.2  
+646  10250.95200     172.2  
+647  10318.16500     172.7  
+648  10250.95200     172.7  
+649  10250.95200     173.6  
+650  10435.74400     173.9  
+651  10250.95200     174.2  
+652  10250.95200     174.6  
+653  10470.23100     175.6  
+654  10581.92900     176.0  
+655  10581.92900     176.1  
+656  10599.00000     176.4  
+657  10581.92900     177.3  
+658  10581.92900     177.7  
+659  10598.02000     177.4  
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Index: 299 entries, 640 to 938
+Data columns (total 16 columns):
+ #   Column        Non-Null Count  Dtype         
+---  ------        --------------  -----         
+ 0   date          299 non-null    datetime64[ns]
+ 1   GDP           299 non-null    float64       
+ 2   CPI           299 non-null    float64       
+ 3   Unemployment  299 non-null    float64       
+ 4   FedFundsRate  299 non-null    float64       
+ 5   M2            298 non-null    float64       
+ 6   Umscent       299 non-null    float64       
+ 7   real_estate   297 non-null    float64       
+ 8   Exports       299 non-null    float64       
+ 9   Imports       299 non-null    float64       
+ 10  year          299 non-null    int32         
+ 11  GDP_YoY       299 non-null    float64       
+ 12  GDP_MoM       299 non-null    float64       
+ 13  CPI_YoY       299 non-null    float64       
+ 14  GDP_Lag1      299 non-null    float64       
+ 15  CPI_Lag1      299 non-null    float64       
+dtypes: datetime64[ns](1), float64(14), int32(1)
+memory usage: 38.5 KB
+None</code></pre>
+</div>
+</div>
+</section>
+<section id="fetching-10-year-treasury-yield-data-from-fred-api" class="level2">
+<h2 class="anchored" data-anchor-id="fetching-10-year-treasury-yield-data-from-fred-api">Fetching 10-Year Treasury Yield Data from FRED API</h2>
+<div id="cell-11" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define request parameters</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"series_id"</span>: <span class="st">"DGS10"</span>,   <span class="co"># 10-Year Treasury Yield</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"api_key"</span>: API_KEY,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"file_type"</span>: <span class="st">"json"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"observation_start"</span>: <span class="st">"2000-01-01"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"observation_end"</span>: <span class="st">"2024-12-31"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"frequency"</span>: <span class="st">"d"</span>,  <span class="co"># Monthly frequency</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"aggregation_method"</span>: <span class="st">"eop"</span>,  <span class="co"># Use period end value</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"units"</span>: <span class="st">"pch"</span>,  <span class="co"># Percentage change</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Send the request</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(base_url, params<span class="op">=</span>params)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the request is successful</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> response.status_code <span class="op">==</span> <span class="dv">200</span>:</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Data request successful!"</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> response.json()</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract data and convert to DataFrame</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    records <span class="op">=</span> []</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> item <span class="kw">in</span> data[<span class="st">'observations'</span>]:</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        records.append({</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            <span class="st">"date"</span>: item[<span class="st">'date'</span>],</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            <span class="st">"10_year_yield"</span>: <span class="bu">float</span>(item[<span class="st">'value'</span>]) <span class="cf">if</span> item[<span class="st">'value'</span>] <span class="op">!=</span> <span class="st">"."</span> <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.DataFrame(records)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Process data</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">'date'</span>])</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.head())</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Data request failed!"</span>, response.status_code, response.text)</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the result to a CSV file</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>file_name <span class="op">=</span> os.path.join(output_folder, <span class="ss">f"10_year_treasury.csv"</span>)</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>df.to_csv(file_name, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Data for 10_year_treasury saved to '</span><span class="sc">{</span>file_name<span class="sc">}</span><span class="ss">'."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Data request successful!
+        date  10_year_yield
+0 2000-01-03        2.01550
+1 2000-01-04       -1.36778
+2 2000-01-05        2.00308
+3 2000-01-06       -0.75529
+4 2000-01-07       -0.76104
+Data for 10_year_treasury saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data/10_year_treasury.csv'.</code></pre>
+</div>
+</div>
+</section>
+<section id="fetching-national-income-and-product-accounts-nipa-data-from-bea-api" class="level2">
+<h2 class="anchored" data-anchor-id="fetching-national-income-and-product-accounts-nipa-data-from-bea-api">Fetching National Income and Product Accounts (NIPA) Data from BEA API</h2>
+<section id="these-data-tables-include" class="level3">
+<h3 class="anchored" data-anchor-id="these-data-tables-include">These data tables include:</h3>
+<p>T20100: Gross Domestic Product and Personal Consumption</p>
+<p>T10105: National Account Savings and Investment Data</p>
+<div id="cell-13" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># BEA API basic configuration</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>BEA_API_KEY <span class="op">=</span> <span class="st">"0539E64B-28C5-43F2-8885-D19E3D784EEE"</span>  <span class="co"># Replace with your API key</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>base_url <span class="op">=</span> <span class="st">"https://apps.bea.gov/api/data/"</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_bea_data(table_name):</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    params <span class="op">=</span> {</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"UserID"</span>: BEA_API_KEY,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"method"</span>: <span class="st">"GetData"</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"datasetname"</span>: <span class="st">"NIPA"</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Frequency"</span>: <span class="st">"A"</span>,  <span class="co"># Annual data</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"TableName"</span>: table_name, </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Year"</span>: <span class="st">"X"</span>,  <span class="co"># Retrieve all years</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ResultFormat"</span>: <span class="st">"JSON"</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> requests.get(base_url, params<span class="op">=</span>params)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> response.json()</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"Results"</span> <span class="kw">in</span> data[<span class="st">"BEAAPI"</span>] <span class="kw">and</span> <span class="st">"Data"</span> <span class="kw">in</span> data[<span class="st">"BEAAPI"</span>][<span class="st">"Results"</span>]:</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.DataFrame(data[<span class="st">"BEAAPI"</span>][<span class="st">"Results"</span>][<span class="st">"Data"</span>])</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Failed to fetch data for table </span><span class="sc">{</span>table_name<span class="sc">}</span><span class="ss">, error message:"</span>, data)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.DataFrame()  <span class="co"># Return an empty DataFrame if no data is retrieved</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetch T20100 data</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>t20100_data <span class="op">=</span> fetch_bea_data(<span class="st">"T20100"</span>)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>t10105_data <span class="op">=</span> fetch_bea_data(<span class="st">"T10105"</span>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>file_name <span class="op">=</span> os.path.join(output_folder, <span class="ss">f"t20100_raw_data.csv"</span>)</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>t20100_data.to_csv(file_name, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Data for t20100_raw_data saved to '</span><span class="sc">{</span>file_name<span class="sc">}</span><span class="ss">'."</span>)</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>file_name <span class="op">=</span> os.path.join(output_folder, <span class="ss">f"t10105_raw_data.csv"</span>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>t10105_data.to_csv(file_name, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Data for t10105_raw_data saved to '</span><span class="sc">{</span>file_name<span class="sc">}</span><span class="ss">'."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Data for t20100_raw_data saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data/t20100_raw_data.csv'.
+Data for t10105_raw_data saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data/t10105_raw_data.csv'.</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="downloading-market-data-from-yahoo-finance" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-market-data-from-yahoo-finance">Downloading Market Data from Yahoo Finance</h2>
+<section id="this-code-fetches-daily-market-data-for-major-indices-and-commodities" class="level3">
+<h3 class="anchored" data-anchor-id="this-code-fetches-daily-market-data-for-major-indices-and-commodities">This code fetches daily market data for major indices and commodities:</h3>
+<p>S&amp;P 500 (^GSPC)</p>
+<p>Nasdaq (^IXIC)</p>
+<p>Dow Jones (^DJI)</p>
+<p>Gold Futures (GC=F)</p>
+<p>Crude Oil Futures (CL=F)</p>
+<div id="cell-15" class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_data(ticker, start_date, end_date):</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Fetch asset data from Yahoo Finance.</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">        ticker (str): Asset ticker symbol (e.g., "^GSPC").</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">        start_date (str): Start date (format "YYYY-MM-DD").</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">        end_date (str): End date (format "YYYY-MM-DD").</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">        pd.DataFrame: DataFrame containing basic asset data (Date, Open, High, Low, Close, Volume).</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Downloading data for </span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss">..."</span>)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Download data from Yahoo Finance</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> yf.download(ticker, start<span class="op">=</span>start_date, end<span class="op">=</span>end_date, interval<span class="op">=</span><span class="st">"1d"</span>)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> data.empty:</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"No data found for </span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss">."</span>)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Retain relevant columns and reset the index</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>        data.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> data[[<span class="st">"Date"</span>, <span class="st">"Open"</span>, <span class="st">"High"</span>, <span class="st">"Low"</span>, <span class="st">"Close"</span>, <span class="st">"Volume"</span>]]</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> data</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Error fetching data for </span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define the list of assets</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    assets <span class="op">=</span> {</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>        <span class="st">"^GSPC"</span>: <span class="st">"S&amp;P_500"</span>,</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>        <span class="st">"^IXIC"</span>: <span class="st">"Nasdaq"</span>,</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>        <span class="st">"^DJI"</span>: <span class="st">"Dow_Jones"</span>,</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>        <span class="st">"GC=F"</span>: <span class="st">"Gold"</span>,</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>        <span class="st">"CL=F"</span>: <span class="st">"Crude_Oil"</span>,</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define the date range</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>    start_date <span class="op">=</span> <span class="st">"2000-11-01"</span></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>    end_date <span class="op">=</span> <span class="st">"2024-11-30"</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Iterate through the assets and download data</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ticker, name <span class="kw">in</span> assets.items():</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> fetch_data(ticker, start_date, end_date)</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Ensure column names are single-level (remove multi-level index)</span></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(data.columns, pd.MultiIndex):</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>            data.columns <span class="op">=</span> data.columns.droplevel(<span class="dv">1</span>)</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> data <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Save the raw data to a CSV file</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>            file_path <span class="op">=</span> os.path.join(output_folder, <span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">_raw_a.csv"</span>)</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>            data.to_csv(file_path, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Raw data for </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> saved to '</span><span class="sc">{</span>file_path<span class="sc">}</span><span class="ss">'."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Downloading data for ^GSPC...
+Raw data for S&amp;P_500 saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data/S&amp;P_500_raw_a.csv'.
+Downloading data for ^IXIC...</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Raw data for Nasdaq saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data/Nasdaq_raw_a.csv'.
+Downloading data for ^DJI...
+Raw data for Dow_Jones saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data/Dow_Jones_raw_a.csv'.
+Downloading data for GC=F...
+Raw data for Gold saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data/Gold_raw_a.csv'.
+Downloading data for CL=F...</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>[*********************100%***********************]  1 of 1 completed</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Raw data for Crude_Oil saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data/Crude_Oil_raw_a.csv'.</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<section id="technical-challenges-and-limitations" class="level2">
+<h2 class="anchored" data-anchor-id="technical-challenges-and-limitations">Technical Challenges and Limitations</h2>
+<p>Navigating the complex world of economic data APIs comes with many challenges. The financial data landscape is characterized by fragmentation, with each source (FRED, BEA, and Yahoo Finance) that offers unique data formats and reporting mechanisms. So we need a sophisticated approach to data standardization and integration.</p>
+<p>One of the most important difficulties is the inherent time inconsistency of managing economic indicators. Macroeconomic data often arrive at different frequencies—some monthly, others quarterly or annually—creating data alignment challenges. Our solution is to utilize interpolation and aggregation strategies to transform these disparate data streams into coherent, consistent time series.</p>
+</section>
+<section id="unintended-consequences-and-technical-impact" class="level2">
+<h2 class="anchored" data-anchor-id="unintended-consequences-and-technical-impact">Unintended Consequences and Technical Impact</h2>
+<section id="observed-data-anomaly" class="level3">
+<h3 class="anchored" data-anchor-id="observed-data-anomaly">Observed Data Anomaly</h3>
+<ul>
+<li><strong>Irregular Yield Curve</strong>:
+<ul>
+<li>Unexpected fluctuations in 10-year Treasury yield data detected</li>
+<li>Potential impact on the interpretation of economic indicators</li>
+<li>Recommend further investigation of anomalous data points</li>
+</ul></li>
+</ul>
+</section>
+<section id="computational-insights" class="level3">
+<h3 class="anchored" data-anchor-id="computational-insights">Computational Insights</h3>
+<ul>
+<li><strong>Performance Bottleneck</strong>:
+<ul>
+<li>Identify potential optimization opportunities in the data retrieval and processing pipeline</li>
+<li>Emphasis on the need for a more efficient API request strategy</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="conclusion-and-suggestions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-and-suggestions">Conclusion and Suggestions</h2>
+<section id="key-technical-achievements" class="level3">
+<h3 class="anchored" data-anchor-id="key-technical-achievements">Key Technical Achievements</h3>
+<ol type="1">
+<li>Successfully developed a powerful multi-source financial data collection framework</li>
+<li>Create a flexible modular data processing pipeline</li>
+<li>Ability to effectively process complex, multi-frequency economic data sets</li>
+</ol>
+</section>
+<section id="actionable-suggestions" class="level3">
+<h3 class="anchored" data-anchor-id="actionable-suggestions">Actionable Suggestions</h3>
+<ul>
+<li><strong>Short-Term Improvements</strong>:
+<ul>
+<li>Implement more complex error handling</li>
+<li>Enhanced data verification mechanism</li>
+<li>Optimize API request strategy</li>
+</ul></li>
+<li><strong>Long-Term Research Directions</strong>:
+<ul>
+<li>Explore machine learning integration for predictive economic analysis</li>
+<li>Develop a more comprehensive data standardization framework</li>
+<li>Establish a common economic data collection and processing toolkit</li>
+</ul></li>
+</ul>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>This step is an important step in creating a more flexible approach to financial and economic data collection. By solving technical challenges and using solutions, we lay the foundation for subsequent economic analysis techniques.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

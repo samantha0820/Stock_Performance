@@ -1,0 +1,43 @@
+# Summary
+
+## Summary of Findings
+
+### Binary Classification
+- **Model Performance**:
+  - **Logistic Regression** achieved an accuracy of **95%**.
+  - Confusion Matrix highlighted balanced performance across both classes:
+    - Precision: **96%** (for `Target=0`) and **94%** (for `Target=1`).
+    - Recall: **92%** (for `Target=0`) and **97%** (for `Target=1`).
+
+### Regression
+- **Linear Regression**:
+  - MSE: **0.0006**
+  - R² Score: **-0.007**
+- **Random Forest**:
+  - MSE: **0.0004**
+  - R² Score: **0.362**
+- **XGBoost**:
+  - MSE: **0.0001**
+  - R² Score: **0.801**
+- **LightGBM**:
+  - MSE: **0.0002**
+  - R² Score: **0.750**
+
+- **Key Insight**: XGBoost outperformed other models in regression, achieving the highest R² Score of **0.801**, indicating better predictive power.
+
+---
+
+## Conclusion
+
+This supervised learning analysis successfully demonstrated the use of classification and regression techniques to predict market outcomes.
+Using XGboost, we predicted that the 5-Day Future Returns of the Dow Jones Index would decrease.  Nonlinear models such as XGBoost and LightGBM are able to perform better when facing complex market dynamics.
+
+1. **Binary Classification**:
+   - Logistic Regression showed high accuracy and balanced performance, making it a reliable model for predicting price direction.
+2. **Regression**:
+   - XGBoost and LightGBM proved effective for regression tasks, with XGBoost providing the best results in terms of accuracy and interpretability.
+
+### Implications:
+- **For Investors**: Accurate predictions of market movements and returns can aid in portfolio management and decision-making.
+- **For Researchers**: Insights gained from this analysis can guide the development of more advanced predictive models, including ensemble approaches.
+

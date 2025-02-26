@@ -1,0 +1,125 @@
+# Project Progress Log
+
+## To-do List
+
+-   Complete model optimization
+-   Create final visualization dashboard
+-   Write comprehensive documentation
+-   Implement automated testing
+-   Add cross-validation framework
+-   Create user guide
+
+## Project Members
+
+### Member-1: Shengmian Wang
+
+**Portfolio**: \[Link to portfolio\]
+
+**Project Role**: Data Infrastructure & Unsupervised Learning
+
+#### Project Responsibilities
+
+-   Research and identify data sources
+-   Implement data collection pipeline
+-   Develop data cleaning workflow
+-   Perform unsupervised learning analysis
+-   Create visualization components
+-   Maintain code repository
+
+#### Weekly Project Contribution Log
+
+**W: 12/11-12/13**
+
+-   Implemented unsupervised learning components:
+
+    -   Created PCA dimensionality reduction
+
+    -   Developed K-means clustering
+
+    -   Analyzed market behavior patterns
+
+    -   Generated clustering visualizations
+
+**W: 12/04-12/08**
+
+-   Developed data cleaning pipeline:
+
+    -   Created cleaning functions
+
+    -   Implemented technical indicators
+
+    -   Added data validation
+
+    -   Handled missing values
+
+**W: 11/27-12/01**
+
+-   Set up data collection infrastructure:
+
+    -   Implemented FRED API integration
+
+    -   Created BEA API connection
+
+    -   Set up Yahoo Finance pipeline
+
+**W: 11/20-11/24**
+
+-   Initial project research:
+
+    -   Identified required data sources
+
+    -   Researched available APIs
+
+    -   Planned data collection strategy
+
+### Member-2: Hailing Liao
+
+**Portfolio**: \[Link to portfolio\]
+
+**Project Role**: Analysis & Supervised Learning
+
+#### Project Responsibilities
+
+-   Perform exploratory data analysis
+-   Develop supervised learning models
+-   Create performance metrics
+-   Generate visualization components
+-   Write technical documentation
+
+#### Weekly Project Contribution Log
+
+**W: 12/11-12/13**
+
+-   Implemented supervised learning models:
+
+    -   Created logistic regression
+
+    -   Developed Random Forest model
+
+    -   Added XGBoost and LightGBM implementations
+
+    -   Generated model performance metrics
+
+**W: 12/04-12/08**
+
+-   Performed comprehensive EDA:
+
+    -   Created distribution analysis
+
+    -   Generated correlation matrices
+
+    -   Analyzed feature relationships
+
+    -   Produced statistical summaries
+
+    -   Developed visualization components
+
+**W: 11/27-12/01**
+
+-   Initial analysis planning:
+
+    -   Researched analysis methods
+
+    -   Planned EDA approach
+
+    -   Designed model framework

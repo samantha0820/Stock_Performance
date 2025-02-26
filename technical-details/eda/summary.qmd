@@ -1,0 +1,22 @@
+# Summary
+## Summary and Interpretation of Results
+
+### Univariate Analysis
+By analyzing the histograms and density plots, we find that the distributions of **Volume** and **Volatility** show a clear right-skewed trend, which indicates that there are some extreme values or outliers in the data. In addition, the distribution of price characteristics (e.g. Open, High, Low, Close) is closer to normal distribution, showing a balanced and symmetrical characteristic.
+
+### Correlation Analysis
+- There is a strong positive correlation between the price characteristics (Open, High, Low, Close). 
+- MA_50 and MA_200 are highly correlated, as expected.  
+
+### Bivariate Analysis
+Future_Return_5D: Target=1 (price increase) is associated with higher returns compared to Target=0 (price decrease). RSI: Smaller differences between target categories, but Target=1 has a slight aggregation in the 50-60 range. MACD and Signal_Line: both have similar distributions between target categories and do not show significant differences.
+
+## Conclusion
+
+This exploratory data analysis revealed critical insights into the dataset:
+
+- **Univariate Analysis** identified the distribution characteristics of all numerical features.  
+- **Correlation Analysis** highlighted strong relationships among price features and moving averages.  
+- **Bivariate Analysis** demonstrated differences in key variables (e.g., *Future_Return_5D*) across the target variable.  
+
+These findings provide a solid foundation for further predictive modeling and feature selection.

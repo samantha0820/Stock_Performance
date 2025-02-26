@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DSAN-5000: Project - Data Cleaning</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/gu-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">DSAN-5000: Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../instructions/overview.html"> 
+<span class="menu-text">Instructions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../collaborators.html"> 
+<span class="menu-text">Collaborators</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../report/report.html"> 
+<span class="menu-text">Report</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-technical-details" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Technical details</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-technical-details">    
+        <li>
+          <a class="dropdown-item" href="../../technical-details/data-collection/main.html">
+            <span class="dropdown-text">Data-collection</span></a>
+            <a class="dropdown-item" href="../../technical-details/data-cleaning/main.html">
+             <span class="dropdown-text">Data-cleaning</span></a>
+             <a class="dropdown-item" href="../../technical-details/unsupervised-learning/main.html">
+              <span class="dropdown-text">Unsupervised-learning</span></a>
+              <a class="dropdown-item" href="../../technical-details/eda/main.html">
+                <span class="dropdown-text">EDA</span></a>
+                <a class="dropdown-item" href="../../technical-details/supervised-learning/main.html">
+                  <span class="dropdown-text">Supervised-learning</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning:</a>
+  <ul class="collapse">
+  <li><a href="#saving-the-raw-data" id="toc-saving-the-raw-data" class="nav-link" data-scroll-target="#saving-the-raw-data">Saving the raw data</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements:</a></li>
+  </ul></li>
+  <li><a href="#what-do-include-on-this-page" id="toc-what-do-include-on-this-page" class="nav-link" data-scroll-target="#what-do-include-on-this-page">What do include on this page</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a>
+  <ul class="collapse">
+  <li><a href="#exmaple" id="toc-exmaple" class="nav-link" data-scroll-target="#exmaple">Exmaple</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Cleaning</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- After digesting the instructions, you can delete this cell, these are assignment instructions and do not need to be included in your final submission.  -->
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
+<p>On this page, you will focus on <strong>data cleaning</strong>, which is an essential step for future analysis. You should have already selected a specific data-science question that can be addressed in a data-driven way.</p>
+<p>It is recommended that you focus on one or two of the following data format, <strong>text</strong>, <strong>tabular</strong>, <strong>image</strong>, <strong>geospatial</strong>, or <strong>network</strong> data.</p>
+<p><strong>Tabular</strong> (e.g.&nbsp;CSV files) and <strong>text</strong> formats are highly recommended, as these are covered most thoroughly in the course. Deviating from these formats may require additional work on your end. Please avoid <strong>timeseries</strong> data formats, as these require special methods not covered in the course. You can include as many additional formats as you want. Your project will revolve around the data you gather and will include data cleaning, analysis, visualization, and storytelling.</p>
+</section>
+<section id="data-cleaning" class="level1">
+<h1>Data Cleaning:</h1>
+<p>Begin gathering your data and document the methods and sources on the <strong>Data cleaning</strong> page of your project. Include screenshots to illustrate the data cleaning process without displaying entire datasets. Ensure <strong>transparency</strong> so anyone can replicate your work.</p>
+<section id="saving-the-raw-data" class="level2">
+<h2 class="anchored" data-anchor-id="saving-the-raw-data">Saving the raw data</h2>
+<ul>
+<li>During the cleaning phase, save the collected data locally to the <code>raw-data</code> folder, in the root of the project, for later processing.
+<ul>
+<li>Do not sync this folder to GitHub.</li>
+</ul></li>
+<li>You should also save files you download manually from online to this folder</li>
+</ul>
+</section>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements:</h2>
+<ul>
+<li>Your data must be relevant to the project’s overall goals and help solve your research questions.</li>
+<li>You must use <strong>at least one API</strong> to collect your data.</li>
+<li>Ensure you have at least one <strong>regression target</strong>: a continuous quantity that can be used for regression prediction with other features.</li>
+<li>Ensure you have at least one <strong>binary classification target</strong>: a two-class (A,B) label that can be predicted using other features.</li>
+<li>Ensure you have at least one <strong>multi-classification target</strong>: a multi-class (A,B,C …) label that can be predicted using other features.</li>
+<li><strong>Do not use a Kaggle topic</strong>—this project is meant to simulate a real-world project. Kaggle datasets are typically too clean and have already been prepped for analysis, which doesn’t align with the project’s goals.</li>
+</ul>
+<p>Remember, data is about <strong>quality</strong>, not quantity, so avoid handling large datasets unless necessary. Focus on data that tells a compelling story and supports the techniques you will apply (e.g., clustering, classification, regression).</p>
+</section>
+</section>
+<section id="what-do-include-on-this-page" class="level1">
+<h1>What do include on this page</h1>
+<p>To ensure clarity and transparency throughout your project, your data cleaning documentation should include the following:</p>
+<ol start="0" type="1">
+<li><p><strong>Include all code used for data cleaning</strong> in the notebook below</p></li>
+<li><p><strong>Data Source Information</strong></p>
+<ul>
+<li>Specify where the data comes from, whether public datasets, APIs, or original cleaning.</li>
+<li>Provide links to datasets or API documentation and explain their relevance to the project.</li>
+</ul></li>
+<li><p><strong>Data Cleaning Methods</strong></p>
+<ul>
+<li>If you used an API or web scraping, explain the tools (e.g., <code>BeautifulSoup</code>, <code>Selenium</code>) and the process.</li>
+<li>Include links to your code for replicating data cleaning.</li>
+</ul></li>
+<li><p><strong>Data Structure and Format</strong></p>
+<ul>
+<li>Describe the structure of your raw data (e.g., rows, columns, data types) and its format (CSV, JSON, etc.).</li>
+</ul></li>
+<li><p><strong>Linking to Data</strong></p>
+<ul>
+<li>Include links to the <strong>raw dataset</strong>, ensuring transparency and allowing replication.</li>
+</ul></li>
+<li><p><strong>Code and Reproducibility</strong></p>
+<ul>
+<li>Link to all relevant code, including data cleaning , with clear documentation to enable replication.</li>
+</ul></li>
+<li><p><strong>Transparency and Replicability</strong></p>
+<ul>
+<li>Ensure your entire workflow is transparent and reproducible by linking all data, code, and documentation. This allows others to follow your process from start to finish.</li>
+</ul></li>
+</ol>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<p>Document an overview summary of the methods you used on this page</p>
+</section>
+<section id="code" class="level1">
+<h1>Code</h1>
+<p>Here you provide your source code used to do this section of the project</p>
+<section id="exmaple" class="level2">
+<h2 class="anchored" data-anchor-id="exmaple">Exmaple</h2>
+<p>In the following code, we first utilized the requests library to retrieve the HTML content from the Wikipedia page. Afterward, we employed BeautifulSoup to parse the HTML and locate the specific table of interest by using the find function. Once the table was identified, we extracted the relevant data by iterating through its rows, gathering country names and their respective populations. Finally, we used Pandas to store the collected data in a DataFrame, allowing for easy analysis and visualization. The data could also be optionally saved as a CSV file for further use.<span class="citation" data-cites="gpt4o"><sup><a href="#ref-gpt4o" role="doc-biblioref">1</a></sup></span></p>
+<div id="cell-6" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python">
+<span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas as pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy as np</span>
+
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define output folders</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>output_folder_cleaned = "/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/processed-data"</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>raw_data_folder = "/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/raw-data"</span>
+
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create processed-data folder if it doesn't exist</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>if not os.path.exists(output_folder_cleaned):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    os.makedirs(output_folder_cleaned)</span>
+
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Load raw macro data</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>raw_data_file = os.path.join(raw_data_folder, "macro_series_raw_collection.csv")</span>
+
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>try:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    merged_data = pd.read_csv(raw_data_file)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    merged_data["date"] = pd.to_datetime(merged_data["date"])</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>except FileNotFoundError:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    print(f"Error: File '{raw_data_file}' not found.")</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    exit()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>except Exception as e:</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    print(f"Error loading file: {e}")</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    exit()</span>
+
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract year from date</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>merged_data["year"] = merged_data["date"].dt.year</span>
+
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify required columns</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>required_columns = ["GDP", "Umscent", "Exports", "Imports", "CPI"]</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>missing_columns = [col for col in required_columns if col not in merged_data.columns]</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>if missing_columns:</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    print(f"Error: Missing required columns: {missing_columns}")</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    exit()</span>
+
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to fill missing values with annual mean</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>def fill_missing_with_annual_mean(data, column):</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    annual_mean = data.groupby("year")[column].transform("mean")</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    data[column] = data[column].fillna(annual_mean)</span>
+
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing values</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>for column in ["GDP", "Umscent", "Exports", "Imports"]:</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    fill_missing_with_annual_mean(merged_data, column)</span>
+
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate growth rates</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>merged_data["GDP_YoY"] = merged_data["GDP"].pct_change(periods=12)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>merged_data["GDP_MoM"] = merged_data["GDP"].pct_change(periods=1)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>merged_data["CPI_YoY"] = merged_data["CPI"].pct_change(periods=12)</span>
+
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Add lagged variables</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>merged_data["GDP_Lag1"] = merged_data["GDP"].shift(1)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>merged_data["CPI_Lag1"] = merged_data["CPI"].shift(1)</span>
+
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter data from 2000 onwards</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>filtered_data = merged_data[merged_data["year"] >= 2000]</span>
+
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Save processed data</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>output_file = os.path.join(output_folder_cleaned, "macro_series_cleaned.csv")</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>filtered_data.to_csv(output_file, index=False)</span>
+
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Print summary</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>print(f"Cleaned data saved to '{output_file}'.")</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>print(filtered_data.head(20))</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>print(filtered_data.info())</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+</div>
+</div>
+<pre><code> Cleaned data saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/processed-data/macro_series_cleaned.csv'.
+  date        GDP    CPI  Unemployment  FedFundsRate      M2  Umscent  \
+640 2000-01-01  10002.179  169.3           4.0          5.45  4667.6    112.0   
+641 2000-02-01  10250.952  170.0           4.1          5.73  4680.9    111.3   
+642 2000-03-01  10250.952  171.0           4.0          5.85  4711.7    107.1   
+643 2000-04-01  10247.720  170.9           3.8          6.02  4767.8    109.2   
+644 2000-05-01  10250.952  171.2           4.0          6.27  4755.7    110.7   
+645 2000-06-01  10250.952  172.2           4.0          6.53  4773.6    106.4   
+646 2000-07-01  10318.165  172.7           4.0          6.54  4791.3    108.3   
+647 2000-08-01  10250.952  172.7           4.1          6.50  4819.5    107.3   
+648 2000-09-01  10250.952  173.6           3.9          6.52  4855.3    106.8   
+649 2000-10-01  10435.744  173.9           3.9          6.51  4871.4    105.8   
+650 2000-11-01  10250.952  174.2           3.9          6.51  4882.8    107.6   
+651 2000-12-01  10250.952  174.6           3.9          6.40  4927.7     98.4   
+652 2001-01-01  10470.231  175.6           4.2          5.98  4978.4     94.7   
+653 2001-02-01  10581.929  176.0           4.2          5.49  5017.1     90.6   
+654 2001-03-01  10581.929  176.1           4.3          5.31  5074.9     91.5   
+655 2001-04-01  10599.000  176.4           4.4          4.80  5139.2     88.4   
+656 2001-05-01  10581.929  177.3           4.3          4.21  5137.3     92.0   
+657 2001-06-01  10581.929  177.7           4.5          3.97  5180.3     92.6   
+658 2001-07-01  10598.020  177.4           4.6          3.77  5210.2     92.4   
+659 2001-08-01  10581.929  177.4           4.9          3.65  5243.9     91.5   
+
+real_estate     Exports   Imports  year   GDP_YoY   GDP_MoM   CPI_YoY  \
+640      100.000  1052.90400  1409.487  2000  0.062741  0.038522  0.027930   
+641      100.571  1096.11075  1477.184  2000  0.064351  0.024872  0.032180   
+642      101.466  1096.11075  1477.184  2000  0.064351  0.000000  0.037621   
+643      102.541  1093.36000  1455.860  2000  0.075739 -0.000315  0.030139   
+644      103.702  1096.11075  1477.184  2000  0.064351  0.000315  0.031325   
+645      104.856  1096.11075  1477.184  2000  0.064351  0.000000  0.037349   
+646      105.722  1125.00200  1518.869  2000  0.065197  0.006557  0.035993   
+647      106.522  1096.11075  1477.184  2000  0.064351 -0.006514  0.033513   
+648      107.136  1096.11075  1477.184  2000  0.064351  0.000000  0.034565   
+649      107.729  1113.17700  1524.520  2000  0.054098  0.018027  0.034503   
+650      108.292  1096.11075  1477.184  2000  0.064351 -0.017708  0.034442   
+651      108.792  1096.11075  1477.184  2000  0.064351  0.000000  0.034360   
+652      109.215  1096.81200  1499.464  2001  0.046795  0.021391  0.037212   
+653      109.643  1026.81175  1403.559  2001  0.032287  0.010668  0.035294   
+654      110.395  1026.81175  1403.559  2001  0.032287  0.000000  0.029825   
+655      111.248  1058.01300  1422.028  2001  0.034279  0.001613  0.032183   
+656      112.203  1026.81175  1403.559  2001  0.032287 -0.001611  0.035631   
+657      113.273  1026.81175  1403.559  2001  0.032287  0.000000  0.031940   
+658      114.227   998.90200  1369.536  2001  0.027123  0.001521  0.027215   
+659      114.989  1026.81175  1403.559  2001  0.032287 -0.001518  0.027215   
+
+GDP_Lag1  CPI_Lag1  
+640   9631.17175     168.8  
+641  10002.17900     169.3  
+642  10250.95200     170.0  
+643  10250.95200     171.0  
+644  10247.72000     170.9  
+645  10250.95200     171.2  
+646  10250.95200     172.2  
+647  10318.16500     172.7  
+648  10250.95200     172.7  
+649  10250.95200     173.6  
+650  10435.74400     173.9  
+651  10250.95200     174.2  
+652  10250.95200     174.6  
+653  10470.23100     175.6  
+654  10581.92900     176.0  
+655  10581.92900     176.1  
+656  10599.00000     176.4  
+657  10581.92900     177.3  
+658  10581.92900     177.7  
+659  10598.02000     177.4  
+<class 'pandas.core.frame.DataFrame'>
+Index: 299 entries, 640 to 938
+Data columns (total 16 columns):
+#   Column        Non-Null Count  Dtype         
+---  ------        --------------  -----         
+0   date          299 non-null    datetime64[ns]
+1   GDP           299 non-null    float64       
+2   CPI           299 non-null    float64       
+3   Unemployment  299 non-null    float64       
+4   FedFundsRate  299 non-null    float64       
+5   M2            298 non-null    float64       
+6   Umscent       299 non-null    float64       
+7   real_estate   297 non-null    float64       
+8   Exports       299 non-null    float64       
+9   Imports       299 non-null    float64       
+10  year          299 non-null    int32         
+11  GDP_YoY       299 non-null    float64       
+12  GDP_MoM       299 non-null    float64       
+13  CPI_YoY       299 non-null    float64       
+14  GDP_Lag1      299 non-null    float64       
+15  CPI_Lag1      299 non-null    float64       
+dtypes: datetime64[ns](1), float64(14), int32(1)
+memory usage: 38.5 KB
+None</code></pre>
+
+<div id="cell-6" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python">
+
+<span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load raw data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>raw_data_file = os.path.join(raw_data_folder, "t20100_raw_data.csv")</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>t20100_data = pd.read_csv(raw_data_file)</span>
+
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define cleaning function</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>def clean_t20100_data(df):</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define target fields</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    keywords = [</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        "Personal income",</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        "Equals: Disposable personal income",</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        "Equals: Personal saving",</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        "Personal saving as a percentage of disposable personal income",</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        "Personal consumption expenditures",</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        "Less: Personal current taxes"</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter and process data</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    filtered_df = df[df["LineDescription"].str.contains("|".join(keywords), case=False, na=False)]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    filtered_df = filtered_df[["TimePeriod", "LineDescription", "DataValue"]]</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Clean numeric values</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    filtered_df["DataValue"] = filtered_df["DataValue"].astype(str)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    filtered_df["DataValue"] = filtered_df["DataValue"].str.replace(",", "", regex=True).str.strip()</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    filtered_df["DataValue"] = pd.to_numeric(filtered_df["DataValue"], errors="coerce")</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    return filtered_df</span>
+
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean and filter data</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>filtered_t20100 = clean_t20100_data(t20100_data)</span>
+
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape to wide format</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>t20100_wide = filtered_t20100.pivot(</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    index="TimePeriod", </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    columns="LineDescription", </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    values="DataValue"</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>).reset_index()</span>
+
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename columns</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>column_mapping = {</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    "Personal income": "Personal_Income (Millions of $)",</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    "Equals: Disposable personal income": "Disposable_Income (Millions of $)",</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    "Equals: Personal saving": "Personal_Saving (Millions of $)",</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    "Personal saving as a percentage of disposable personal income": "Saving_Rate (%)",</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    "Personal consumption expenditures": "Consumption_Expenditures (Millions of $)",</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    "Less: Personal current taxes": "Personal_Taxes (Millions of $)"</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>t20100_wide.rename(columns=column_mapping, inplace=True)</span>
+
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for year 2000 and later</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>filtered_data = t20100_wide[t20100_wide["TimePeriod"] >= 2000]</span>
+
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Save cleaned data</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>file_name = os.path.join(output_folder_cleaned, "personal_info_cleaned.csv")</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>filtered_data.to_csv(file_name, index=False)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>print(f"Data for personal_info_cleaned saved to '{file_name}'.")</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+</div>
+</div>
+      <pre><code>Filtered T20100 data:
+        TimePeriod  LineDescription  DataValue
+     0        1929  Personal income    85289.0
+     1        1930  Personal income    76533.0
+     2        1931  Personal income    65668.0
+     3        1932  Personal income    50294.0
+     4        1933  Personal income    47234.0
+     Reshaped T20100 data:
+     LineDescription  TimePeriod  \
+     90                     2019   
+     91                     2020   
+     92                     2021   
+     93                     2022   
+     94                     2023   
+     
+     LineDescription  Disposable personal income, chained (2017) dollars  \
+     90                                                             3.1    
+     91                                                             6.3    
+     92                                                             3.4    
+     93                                                            -5.5    
+     94                                                             5.1    
+     
+     LineDescription  Disposable personal income, current dollars  \
+     90                                                       4.6   
+     91                                                       7.5   
+     92                                                       7.7   
+     93                                                       0.7   
+     94                                                       9.0   
+     
+     LineDescription  Disposable_Income (Millions of $)  \
+     90                                      16164498.0   
+     91                                      17374805.0   
+     92                                      18714400.0   
+     93                                      18844013.0   
+     94                                      20546800.0   
+     
+     LineDescription  Personal_Saving (Millions of $)  \
+     90                                     1178158.0   
+     91                                     2659010.0   
+     92                                     2095700.0   
+     93                                      566096.0   
+     94                                      967225.0   
+     
+     LineDescription  Personal_Taxes (Millions of $)  \
+     90                                    2198663.0   
+     91                                    2245277.0   
+     92                                    2705098.0   
+     93                                    3244907.0   
+     94                                    2855735.0   
+     
+     LineDescription  Consumption_Expenditures (Millions of $)  \
+     90                                             14437543.0   
+     91                                             14225657.0   
+     92                                             16113945.0   
+     93                                             17690841.0   
+     94                                             18822769.0   
+     
+     LineDescription  Personal_Income (Millions of $)  \
+     90                                    18363160.0   
+     91                                    19620082.0   
+     92                                    21419498.0   
+     93                                    22088920.0   
+     94                                    23402535.0   
+     
+     LineDescription  Personal income excluding current transfer receipts, Billions of chained (2017) dollars  \
+     90                                                      14700259.0                                         
+     91                                                      14708618.0                                         
+     92                                                      15385380.0                                         
+     93                                                      15459172.0                                         
+     94                                                      15880418.0                                         
+     
+     LineDescription  Personal income receipts on assets  Saving_Rate (%)  
+     90                                        2950022.0              7.3  
+     91                                        2912422.0             15.3  
+     92                                        3180726.0             11.2  
+     93                                        3474032.0              3.0  
+     94                                        3822888.0              4.7  
+     Data for personal_info_cleaned saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/processed-data/personal_info_cleaned.csv'.
+    </code></pre>
+    <div id="cell-6" class="cell" data-execution_count="2">
+    <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python">
+    
+    <span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load raw government spending data</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>raw_data_file = os.path.join(raw_data_folder, "t10105_raw_data.csv")</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>t10105_data = pd.read_csv(raw_data_file)</span>
+    
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define cleaning function</span></span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>def clean_t10105_data(df):</span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define target categories</span></span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    keywords = [</span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>       "Government consumption expenditures and gross investment",</span>
+    <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>       "Federal",</span>
+    <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>       "State and local"</span>
+    <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    ]</span>
+    <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    </span>
+    <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter and process data</span></span>
+    <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    filtered_df = df[df["LineDescription"].str.contains("|".join(keywords), case=False, na=False)]</span>
+    <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    filtered_df = filtered_df[["TimePeriod", "LineDescription", "DataValue"]]</span>
+    <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    </span>
+    <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Clean numeric values</span></span>
+    <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    filtered_df["DataValue"] = filtered_df["DataValue"].str.replace(",", "", regex=True)</span>
+    <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    filtered_df["DataValue"] = pd.to_numeric(filtered_df["DataValue"], errors="coerce")</span>
+    <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    </span>
+    <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    return filtered_df</span>
+    
+    <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean and process data</span></span>
+    <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>filtered_t10105 = clean_t10105_data(t10105_data)</span>
+    
+    <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape to wide format</span></span>
+    <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>t10105_wide = filtered_t10105.pivot(</span>
+    <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    index="TimePeriod",</span>
+    <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    columns="LineDescription", </span>
+    <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    values="DataValue"</span>
+    <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>).reset_index()</span>
+    
+    <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Add units to column names</span></span>
+    <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>t10105_wide.rename(</span>
+    <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    columns=lambda x: f"{x} (Millions of $)" if x != "TimePeriod" else x, </span>
+    <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    inplace=True</span>
+    <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>)</span>
+    
+    <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Save processed data</span></span>
+    <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>file_name = os.path.join(output_folder_cleaned, "Government_Spending_Breakdown.csv")</span>
+    <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>t10105_wide.to_csv(file_name, index=False)</span>
+    <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>print(f"Data for Government_Spending_Breakdown saved to '{file_name}'.")</span>
+    </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+    <div class="cell-output cell-output-stdout">
+    </div>
+    </div>
+  <pre><code>Filtered T10105 data:
+    TimePeriod                                    LineDescription  DataValue
+1995        1929  Government consumption expenditures and gross ...       9622
+1996        1930  Government consumption expenditures and gross ...      10273
+1997        1931  Government consumption expenditures and gross ...      10169
+1998        1932  Government consumption expenditures and gross ...       8946
+1999        1933  Government consumption expenditures and gross ...       8875
+Reshaped T10105 data:
+LineDescription  TimePeriod  Federal (Millions of $)  \
+90                     2019                  1419500   
+91                     2020                  1523016   
+92                     2021                  1603184   
+93                     2022                  1641036   
+94                     2023                  1762627   
+
+LineDescription  Government consumption expenditures and gross investment (Millions of $)  \
+90                                                         3785995                          
+91                                                         3999638                          
+92                                                         4203482                          
+93                                                         4453765                          
+94                                                         4710522                          
+
+LineDescription  State and local (Millions of $)  
+90                                       2366496  
+91                                       2476621  
+92                                       2600299  
+93                                       2812730  
+94                                       2947896  
+Data for Government_Spending_Breakdown saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/processed-data/Government_Spending_Breakdown.csv'.
+</code></pre>
+
+<div id="cell-6" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python">
+
+<span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RSI indicator</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>def calculate_rsi(data, window=14):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    delta = data['Close'].diff(1)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    gain = (delta.where(delta > 0, 0)).rolling(window=window).mean()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    loss = (-delta.where(delta < 0, 0)).rolling(window=window).mean()</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    rs = gain / loss</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    return 100 - (100 / (1 + rs))</span>
+
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean and process market data</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>def clean_and_process_data(data, date_range):</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    try:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Format date index</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        data["Date"] = pd.to_datetime(data["Date"])</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        data = data.set_index("Date")</span>
+
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate technical indicators</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        data["MA_50"] = data["Close"].rolling(window=50).mean()</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        data["MA_200"] = data["Close"].rolling(window=200).mean()</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        data["Daily_Return"] = data["Close"].pct_change()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        data["Volatility"] = data["Daily_Return"].rolling(window=30).std()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        data["RSI"] = calculate_rsi(data)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        data["EMA_12"] = data["Close"].ewm(span=12, adjust=False).mean()</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        data["EMA_26"] = data["Close"].ewm(span=26, adjust=False).mean()</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        data["MACD"] = data["EMA_12"] - data["EMA_26"]</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        data["Signal_Line"] = data["MACD"].ewm(span=9, adjust=False).mean()</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate price ranges</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        data["High_Low"] = data["High"] - data["Low"]</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        data["High_Close"] = abs(data["High"] - data["Close"].shift(1))</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        data["Low_Close"] = abs(data["Low"] - data["Close"].shift(1))</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        data["True_Range"] = data[["High_Low", "High_Close", "Low_Close"]].max(axis=1)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        data["ATR"] = data["True_Range"].rolling(window=14).mean()</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        data["OBV"] = (np.sign(data["Close"].diff()) * data["Volume"]).fillna(0).cumsum()</span>
+
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add lagged indicators</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        for lag in [1, 2, 3]:</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>            data[f"RSI_Lag{lag}"] = data["RSI"].shift(lag)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>            data[f"MACD_Lag{lag}"] = data["MACD"].shift(lag)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>            data[f"Close_Lag{lag}"] = data["Close"].shift(lag)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>            data[f"Volume_Lag{lag}"] = data["Volume"].shift(lag)</span>
+
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Handle missing values</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        data = fill_missing_values(data)</span>
+
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Generate targets</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        data["Target"] = np.where(data["Close"].shift(-5) > data["Close"], 1, 0)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        data["Future_Return_5D"] = data["Close"].shift(-5) / data["Close"] - 1</span>
+
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        data.reset_index(inplace=True)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        return data</span>
+        
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    except Exception as e:</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        print(f"Error cleaning data: {e}")</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        return None</span>
+
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>if __name__ == "__main__":</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set date range</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    date_range = pd.date_range("2000-11-01", "2024-11-30", freq="D")</span>
+
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Process each market data file</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    for file_name in os.listdir(raw_data_folder):</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>        if file_name.endswith("_raw_a.csv"):</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>            asset_name = file_name.replace("_raw_a.csv", "")</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>            raw_file_path = os.path.join(raw_data_folder, file_name)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>            raw_data = pd.read_csv(raw_file_path)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Clean and save data</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>            cleaned_data = clean_and_process_data(raw_data, date_range)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>            if cleaned_data is not None:</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>                processed_file_path = os.path.join(output_folder_cleaned,</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>                                                    f"{asset_name}_cleaned.csv")</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>                cleaned_data.to_csv(processed_file_path, index=False)</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>                print(f"Cleaned data for {asset_name} saved to '{processed_file_path}'.")</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+</div>
+</div>
+      <pre><code>/var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:59: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Close"] = data["Close"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:60: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Open"] = data["Open"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:61: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["High"] = data["High"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:62: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Low"] = data["Low"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:68: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_50"] = data["MA_50"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:69: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_200"] = data["MA_200"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:85: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data[f"Close_Lag{lag}"] = data[f"Close_Lag{lag}"].fillna(method="ffill").fillna(method="bfill")
+      Cleaned data for Gold saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/processed-data/Gold_cleaned.csv'.
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:59: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Close"] = data["Close"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:60: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Open"] = data["Open"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:61: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["High"] = data["High"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:62: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Low"] = data["Low"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:68: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_50"] = data["MA_50"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:69: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_200"] = data["MA_200"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:85: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data[f"Close_Lag{lag}"] = data[f"Close_Lag{lag}"].fillna(method="ffill").fillna(method="bfill")
+      Cleaned data for Nasdaq saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/processed-data/Nasdaq_cleaned.csv'.
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:59: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Close"] = data["Close"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:60: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Open"] = data["Open"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:61: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["High"] = data["High"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:62: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Low"] = data["Low"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:68: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_50"] = data["MA_50"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:69: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_200"] = data["MA_200"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:85: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data[f"Close_Lag{lag}"] = data[f"Close_Lag{lag}"].fillna(method="ffill").fillna(method="bfill")
+      Cleaned data for Crude_Oil saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/processed-data/Crude_Oil_cleaned.csv'.
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:59: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Close"] = data["Close"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:60: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Open"] = data["Open"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:61: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["High"] = data["High"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:62: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Low"] = data["Low"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:68: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_50"] = data["MA_50"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:69: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_200"] = data["MA_200"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:85: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data[f"Close_Lag{lag}"] = data[f"Close_Lag{lag}"].fillna(method="ffill").fillna(method="bfill")
+      Cleaned data for S&P_500 saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/processed-data/S&P_500_cleaned.csv'.
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:59: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Close"] = data["Close"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:60: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Open"] = data["Open"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:61: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["High"] = data["High"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:62: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["Low"] = data["Low"].fillna(method="ffill").fillna(method="bfill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:68: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_50"] = data["MA_50"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:69: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data["MA_200"] = data["MA_200"].fillna(method="ffill")
+      /var/folders/1z/n1k_hhl168s2rqld4kqxxr880000gn/T/ipykernel_78435/3783961959.py:85: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+        data[f"Close_Lag{lag}"] = data[f"Close_Lag{lag}"].fillna(method="ffill").fillna(method="bfill")
+      Cleaned data for Dow_Jones saved to '/Users/qqmian/Desktop/GU_5000/Stock_Market_Performance/data/processed-data/Dow_Jones_cleaned.csv'.
+    </code></pre>  
+  </div>
+
+</div>
+
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-gpt4o" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">ChatGPT, version-4o, OpenAI, may-13, 2024, chat.openai.com.</div>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

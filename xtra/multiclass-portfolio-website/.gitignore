@@ -1,0 +1,5 @@
+/.quarto/
+# Ignore all files in data directory
+data/*
+# But keep the directory structure
+!data/.gitkeep
